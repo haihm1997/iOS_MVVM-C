@@ -2,62 +2,57 @@
 //  NetworkError.swift
 //  BaseMVVM
 //
-//  Created by Hoang Hai on 9/13/20.
-//  Copyright © 2020 TonyHoang. All rights reserved.
+//  Created by Hoang Hai on 10/04/2021.
+//  Copyright © 2021 TonyHoang. All rights reserved.
 //
 
 import Foundation
+
 import Alamofire
 
-enum NetworkError: Error {
-    case encodingFailed
-    case serverError
+public enum NetworkError: Error {
+    case undefined
     case lostInternetConnection
+    case errorMessage(message: String, code: String)
     case other(error: Error)
 }
 
 extension NetworkError: LocalizedError {
-    
     public var errorDescription: String? {
         switch self {
-        case .encodingFailed:
-            return "Encoding Failed!"
-        case .serverError:
-            return ""
-        case .lostInternetConnection:
-            return "Lost internet connection"
+        case .undefined:
+            return "Undefined"
+        case .errorMessage(let message, _):
+            return message
         case .other(let error):
             return error.localizedDescription
+        case .lostInternetConnection:
+            return "Lost Conection!"
         }
     }
-    
 }
 
-// MARK: - Mapping Error
+//MARK: - Mapping
 
-protocol NetworkErrorConvertible {
+public protocol NetworkErrorConvertible {
     func asNetworkError() -> NetworkError
 }
 
 extension NetworkError: NetworkErrorConvertible {
-    func asNetworkError() -> NetworkError {
+    public func asNetworkError() -> NetworkError {
         return self
     }
 }
 
-extension Error {
-    
+public extension Error {
     func asNetworkError() -> NetworkError {
         (self as? NetworkErrorConvertible)?.asNetworkError() ?? .other(error: self)
     }
-    
 }
 
 extension AFError: NetworkErrorConvertible {
-    
-    func asNetworkError() -> NetworkError {
+    public func asNetworkError() -> NetworkError {
         if let error = self.underlyingError as NSError?, error.domain == NSURLErrorDomain {
-            // Code = -1009 is lost internet connection
             if error.code == -1009 {
                 return .lostInternetConnection
             }
@@ -66,7 +61,4 @@ extension AFError: NetworkErrorConvertible {
         
         return (self.underlyingError as? NetworkErrorConvertible)?.asNetworkError() ?? .other(error: self)
     }
-
 }
-
-

@@ -9,29 +9,27 @@
 import UIKit
 import SnapKit
 import RxCocoa
+import WebKit
 
 class HomeViewController: UIViewController {
     
-    let centerLabel = configure(UILabel()) { label in
-        label.text = "Center Label"
-        label.textColor = .blue
-    }
+    let webView = WKWebView()
+    
+    let viewModel = HomeViewModel()
     
     override func loadView() {
         super.loadView()
         view.backgroundColor = .white
-        view.addSubviews(centerLabel)
+        view.addSubviews(webView)
         
-        centerLabel.snp.makeConstraints { (maker) in
-            maker.center.equalTo(view.center)
+        self.webView.snp.makeConstraints { (maker) in
+            maker.top.leading.trailing.bottom.equalToSuperview()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-
+        webView.load(URLRequest(url: URL(string: "https://www.google.com.vn/")!))
     }
 
 }

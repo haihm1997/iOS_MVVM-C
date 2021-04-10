@@ -2,71 +2,38 @@
 //  Network.swift
 //  BaseMVVM
 //
-//  Created by Hoang Hai on 9/13/20.
-//  Copyright © 2020 TonyHoang. All rights reserved.
+//  Created by Hoang Hai on 10/04/2021.
+//  Copyright © 2021 TonyHoang. All rights reserved.
 //
 
 import Foundation
-import Alamofire
 import RxSwift
+import Alamofire
 
 public class Network {
-    var configuration: NetworkConfiguration
-    let afSection: Session
+    let configuration: NetworkConfiguration
+    let session: Session
     
-    init(configuration: NetworkConfiguration, interceptor: RequestInterceptor? = nil) {
+    public init(configuration: NetworkConfiguration) {
         self.configuration = configuration
-        self.afSection = Session(startRequestsImmediately: false,
-                                 interceptor: interceptor,
-                                 cachedResponseHandler: ResponseCacher(behavior: .doNotCache))
+        self.session = Session(startRequestsImmediately: false,
+                               interceptor: nil,
+                               serverTrustManager: nil,
+                               cachedResponseHandler: ResponseCacher(behavior: .doNotCache))
     }
 }
 
-public class SimpleNetwork: Network {
-    init() {
-        super.init(configuration: NetworkConfiguration(baseUrl: listingBaseUrl))
-    }
-    
-    public func updateLanguage(_ language: String?) {
-        self.configuration.language = language
-    }
-}
+extension Network: ReactiveCompatible {}
 
-public class RefreshableTokenNetwork: Network {
-    private let interceptor: NetworkInterceptor
-    public let autoRefreshToken = PublishSubject<String?>()
-    
-    var networkAutoRefreshToken: Observable<String?> {
-        return autoRefreshToken.asObserver().observeOn(MainScheduler.instance)
+extension Reactive where Base: Network {
+    public func request(_ route: EndPointConvertible) -> Single<DataRequest> {
+        return request(RequestConvertible(configuration: base.configuration, endpoint: route))
     }
     
-    public init() {
-        let config = NetworkConfiguration(baseUrl: listingBaseUrl)
-        interceptor = NetworkInterceptor(configuration: config)
-        super.init(configuration: config, interceptor: interceptor)
-        interceptor.afSession = self.afSection
-    }
-    
-    public func updateToken(_ token: String?) {
-        interceptor.updateToken(token) { [weak self] (token) in
-            self?.autoRefreshToken.onNext(token)
-        }
-    }
-    
-    public func updateLanguage(_ code: String?) {
-        interceptor.updateLanguage(code)
-    }
-    
-    public func clearCurrentSession() -> Completable {
-        return Completable.create { [unowned self] (callBack) -> Disposable in
-            self.interceptor.updateToken(nil, completionHandler: nil)
-            callBack(.completed)
+    public func request(_ request: RequestConvertible) -> Single<DataRequest> {
+        return Single.create { [session = base.session] callback -> Disposable in
+            callback(.success(session.request(request)))
             return Disposables.create()
         }
     }
-    
 }
-
-
-
-
