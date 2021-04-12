@@ -9,6 +9,8 @@ target 'BaseMVVM' do
     pod 'RxSwift', '~> 5'
     pod 'RxCocoa', '~> 5'
     pod 'SnapKit', '~> 5.0.0'
+    pod 'Swinject'
+    pod 'NSObject+Rx'
 
   target 'BaseMVVMTests' do
     inherit! :search_paths

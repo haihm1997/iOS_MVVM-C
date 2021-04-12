@@ -11,20 +11,14 @@ import RxSwift
 import RxRelay
 import Alamofire
 
-class HomeViewModel {
+class HomeViewModel: BaseViewModel {
     
-    let disposedBag = DisposeBag()
-    let network = Network(configuration: NetworkConfiguration(baseURL: MOVIE_URL))
-    let movieService: MovieServiceType
+    // Output
+    let outMovies = BehaviorRelay<[Movie]>(value: [])
     
-    init() {
-        movieService = MovieService(network: network)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            self.movieService.fetchPopularMovies().asObservable().subscribe(onNext: { movies in
-                print(movies.count)
-            }).disposed(by: self.disposedBag)
-            
-        }
+    init(injector: MovieInjectorType) {
+        super.init()
+        injector.getMovieService().fetchPopularMovies().asObservable().bind(to: outMovies).disposed(by: rx.disposeBag)
     }
     
 }

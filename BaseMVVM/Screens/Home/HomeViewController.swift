@@ -10,13 +10,14 @@ import UIKit
 import SnapKit
 import RxCocoa
 import WebKit
+import RxSwift
+import NSObject_Rx
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
     
     let webView = WKWebView()
-    
-    let viewModel = HomeViewModel()
-    
+    var viewModel: HomeViewModel!
+        
     override func loadView() {
         super.loadView()
         view.backgroundColor = .white
@@ -30,6 +31,10 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         webView.load(URLRequest(url: URL(string: "https://www.google.com.vn/")!))
+        
+        viewModel.outMovies.subscribe(onNext: { movies in
+            print("HomeViewController: \(movies.count)")
+        }).disposed(by: rx.disposeBag)
     }
 
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Swinject
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,14 +15,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let _ = ServiceManager.shared
         
         let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = HomeViewController()
-        window.makeKeyAndVisible()
+        let appCoordinator = AppCoordinator(window: window)
+        appCoordinator.start()
         self.window = window
         
         return true
     }
 
 }
+
+class ServiceManager {
+    
+    static let shared = ServiceManager()
+    
+    func movieService() -> MovieServiceType {
+        return Assembler.resolve(MovieServiceType.self)!
+    }
+}
+
+
 

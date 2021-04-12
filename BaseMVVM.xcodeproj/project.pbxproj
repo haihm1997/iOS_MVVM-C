@@ -28,6 +28,20 @@
 		BCA137902621FF9000801770 /* MovieAPIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA1378F2621FF9000801770 /* MovieAPIRouter.swift */; };
 		BCA137A5262200BD00801770 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA137A4262200BD00801770 /* MovieService.swift */; };
 		BCA137AA262201CF00801770 /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA137A9262201CF00801770 /* Configs.swift */; };
+		BCA137FD2622A09200801770 /* Assembler+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA137FC2622A09200801770 /* Assembler+.swift */; };
+		BCA138052622A10500801770 /* ServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA138042622A10500801770 /* ServiceAssembly.swift */; };
+		BCA138122622AB0B00801770 /* AssemblerConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA138112622AB0B00801770 /* AssemblerConfigs.swift */; };
+		BCA138172622AD1500801770 /* Assembler+Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA138162622AD1500801770 /* Assembler+Service.swift */; };
+		BCA1381C262346A000801770 /* ViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA1381B262346A000801770 /* ViewModelAssembly.swift */; };
+		BCA13821262349B500801770 /* ViewControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA13820262349B500801770 /* ViewControllerAssembly.swift */; };
+		BCA13828262401E400801770 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA13827262401E400801770 /* BaseCoordinator.swift */; };
+		BCA138302624067500801770 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA1382F2624067500801770 /* AppCoordinator.swift */; };
+		BCA1383526241E8500801770 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA1383426241E8500801770 /* HomeCoordinator.swift */; };
+		BCA13848262422FA00801770 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA13847262422FA00801770 /* BaseViewModel.swift */; };
+		BCA138512624453700801770 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA138502624453700801770 /* BaseViewController.swift */; };
+		BCA1385A2624490C00801770 /* ExtendApplication+Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA138592624490C00801770 /* ExtendApplication+Services.swift */; };
+		BCA1386526244A3A00801770 /* ExtendApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA1386426244A3A00801770 /* ExtendApplication.swift */; };
+		BCA1386B26244AFF00801770 /* MovieInjectorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA1386A26244AFF00801770 /* MovieInjectorType.swift */; };
 		BCB31DF42620140B0087B5A5 /* DomainConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB31DF32620140B0087B5A5 /* DomainConvertible.swift */; };
 		BCB31E1826203BEA0087B5A5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB31E1726203BEA0087B5A5 /* HomeViewModel.swift */; };
 		BCCC3CAB250B73060065D7DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCC3CAA250B73060065D7DE /* AppDelegate.swift */; };
@@ -80,6 +94,20 @@
 		BCA1378F2621FF9000801770 /* MovieAPIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAPIRouter.swift; sourceTree = "<group>"; };
 		BCA137A4262200BD00801770 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		BCA137A9262201CF00801770 /* Configs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
+		BCA137FC2622A09200801770 /* Assembler+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assembler+.swift"; sourceTree = "<group>"; };
+		BCA138042622A10500801770 /* ServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssembly.swift; sourceTree = "<group>"; };
+		BCA138112622AB0B00801770 /* AssemblerConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblerConfigs.swift; sourceTree = "<group>"; };
+		BCA138162622AD1500801770 /* Assembler+Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assembler+Service.swift"; sourceTree = "<group>"; };
+		BCA1381B262346A000801770 /* ViewModelAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelAssembly.swift; sourceTree = "<group>"; };
+		BCA13820262349B500801770 /* ViewControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAssembly.swift; sourceTree = "<group>"; };
+		BCA13827262401E400801770 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		BCA1382F2624067500801770 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		BCA1383426241E8500801770 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		BCA13847262422FA00801770 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		BCA138502624453700801770 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		BCA138592624490C00801770 /* ExtendApplication+Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtendApplication+Services.swift"; sourceTree = "<group>"; };
+		BCA1386426244A3A00801770 /* ExtendApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendApplication.swift; sourceTree = "<group>"; };
+		BCA1386A26244AFF00801770 /* MovieInjectorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInjectorType.swift; sourceTree = "<group>"; };
 		BCB31DF32620140B0087B5A5 /* DomainConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainConvertible.swift; sourceTree = "<group>"; };
 		BCB31E1726203BEA0087B5A5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		BCCC3CA7250B73060065D7DE /* BaseMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -243,9 +271,84 @@
 			path = Movie;
 			sourceTree = "<group>";
 		};
+		BCA137FA2622A06400801770 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				BCA137FB2622A08000801770 /* Extensions */,
+				BCA138042622A10500801770 /* ServiceAssembly.swift */,
+				BCA1381B262346A000801770 /* ViewModelAssembly.swift */,
+				BCA13820262349B500801770 /* ViewControllerAssembly.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		BCA137FB2622A08000801770 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BCA137FC2622A09200801770 /* Assembler+.swift */,
+				BCA138112622AB0B00801770 /* AssemblerConfigs.swift */,
+				BCA138162622AD1500801770 /* Assembler+Service.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BCA13825262401BA00801770 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				BCA13826262401D600801770 /* Base */,
+				BCA1382F2624067500801770 /* AppCoordinator.swift */,
+				BCA1383426241E8500801770 /* HomeCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		BCA13826262401D600801770 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				BCA13827262401E400801770 /* BaseCoordinator.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		BCA13846262422EC00801770 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				BCA13847262422FA00801770 /* BaseViewModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		BCA1384F2624452B00801770 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				BCA138502624453700801770 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		BCA13858262448ED00801770 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				BCA138592624490C00801770 /* ExtendApplication+Services.swift */,
+				BCA1386426244A3A00801770 /* ExtendApplication.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		BCA1386926244AE100801770 /* Injector */ = {
+			isa = PBXGroup;
+			children = (
+				BCA1386A26244AFF00801770 /* MovieInjectorType.swift */,
+			);
+			path = Injector;
+			sourceTree = "<group>";
+		};
 		BCB31DDF2620128F0087B5A5 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				BCA13858262448ED00801770 /* Application */,
+				BCA13825262401BA00801770 /* Coordinator */,
+				BCA137FA2622A06400801770 /* DI */,
 				BCB31E1526203BBE0087B5A5 /* Business */,
 				BCB31DF0262013E40087B5A5 /* Shared */,
 				BCB31DE0262012A30087B5A5 /* Models */,
@@ -272,6 +375,7 @@
 		BCB31DF2262013F50087B5A5 /* Adapters */ = {
 			isa = PBXGroup;
 			children = (
+				BCA1386926244AE100801770 /* Injector */,
 				BCB31DF32620140B0087B5A5 /* DomainConvertible.swift */,
 			);
 			path = Adapters;
@@ -280,6 +384,7 @@
 		BCB31E1526203BBE0087B5A5 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				BCA13846262422EC00801770 /* Base */,
 				BCB31E1626203BCF0087B5A5 /* Home */,
 			);
 			path = Business;
@@ -359,6 +464,7 @@
 		BCCC3CDC250B73F20065D7DE /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				BCA1384F2624452B00801770 /* Base */,
 				BCCC3CDD250B73FB0065D7DE /* Home */,
 			);
 			path = Screens;
@@ -634,22 +740,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCA1386B26244AFF00801770 /* MovieInjectorType.swift in Sources */,
+				BCA138122622AB0B00801770 /* AssemblerConfigs.swift in Sources */,
 				BCA137882621FF0700801770 /* MovieModel.swift in Sources */,
+				BCA13821262349B500801770 /* ViewControllerAssembly.swift in Sources */,
+				BCA1381C262346A000801770 /* ViewModelAssembly.swift in Sources */,
 				BCA1375D2621FB3600801770 /* NetworkLogger.swift in Sources */,
+				BCA138052622A10500801770 /* ServiceAssembly.swift in Sources */,
 				BCB31DF42620140B0087B5A5 /* DomainConvertible.swift in Sources */,
 				BCA137A5262200BD00801770 /* MovieService.swift in Sources */,
+				BCA138302624067500801770 /* AppCoordinator.swift in Sources */,
 				BCCC3CAB250B73060065D7DE /* AppDelegate.swift in Sources */,
 				BCB31E1826203BEA0087B5A5 /* HomeViewModel.swift in Sources */,
 				BCA1374B2621FA3500801770 /* Network.swift in Sources */,
+				BCA13828262401E400801770 /* BaseCoordinator.swift in Sources */,
+				BCA138512624453700801770 /* BaseViewController.swift in Sources */,
+				BCA13848262422FA00801770 /* BaseViewModel.swift in Sources */,
 				BCA137902621FF9000801770 /* MovieAPIRouter.swift in Sources */,
 				BCA1368626206B3800801770 /* Movie.swift in Sources */,
 				BC7B122425160A3F008D0E59 /* View+.swift in Sources */,
+				BCA1385A2624490C00801770 /* ExtendApplication+Services.swift in Sources */,
+				BCA137FD2622A09200801770 /* Assembler+.swift in Sources */,
+				BCA1383526241E8500801770 /* HomeCoordinator.swift in Sources */,
+				BCA138172622AD1500801770 /* Assembler+Service.swift in Sources */,
 				BCA137762621FDEA00801770 /* Single+Validation.swift in Sources */,
 				BCA137832621FE7200801770 /* Single+Decodable+BaseResponse.swift in Sources */,
 				BC7B122C25160AE5008D0E59 /* ViewController+.swift in Sources */,
 				BCA137582621FACA00801770 /* NetworkError.swift in Sources */,
 				BCA137AA262201CF00801770 /* Configs.swift in Sources */,
 				BCA1377E2621FE3E00801770 /* Single+Decodable.swift in Sources */,
+				BCA1386526244A3A00801770 /* ExtendApplication.swift in Sources */,
 				BCA137702621FCD700801770 /* RequestConvertible.swift in Sources */,
 				BCA1376B2621FCA200801770 /* HTTPEncoder.swift in Sources */,
 				BCA137632621FC6600801770 /* EndpointConvertible.swift in Sources */,
