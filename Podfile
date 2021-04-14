@@ -11,6 +11,7 @@ target 'BaseMVVM' do
     pod 'SnapKit', '~> 5.0.0'
     pod 'Swinject'
     pod 'NSObject+Rx'
+    pod 'MBProgressHUD', '~> 1.2.0'
 
   target 'BaseMVVMTests' do
     inherit! :search_paths

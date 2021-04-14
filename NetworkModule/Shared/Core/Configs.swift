@@ -9,4 +9,3 @@
 import Foundation
 
 let MOVIE_URL = URL(string: "http://api.themoviedb.org/3/movie")!
-let TEST_URL = URL(string: "https://swapi.dev")!

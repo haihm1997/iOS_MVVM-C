@@ -15,10 +15,19 @@ class HomeViewModel: BaseViewModel {
     
     // Output
     let outMovies = BehaviorRelay<[Movie]>(value: [])
+    var outError: Observable<ProjectError>
     
     init(injector: MovieInjectorType) {
+        let errorTracker = ErrorTracker()
+        outError = errorTracker.asDomain()
         super.init()
-        injector.getMovieService().fetchPopularMovies().asObservable().bind(to: outMovies).disposed(by: rx.disposeBag)
+        injector.getMovieService()
+            .fetchPopularMovies()
+            .asObservable()
+            .trackError(with: errorTracker)
+            .bind(to: outMovies)
+            .disposed(by: rx.disposeBag)
+        
     }
     
 }

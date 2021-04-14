@@ -29,7 +29,8 @@ extension MovieService: MovieServiceType {
         return network.rx.request(MovieAPIRouter.movies)
             .validate()
             .responseDecodable(of: MovieResult.self)
-            .map { $0.results.map { $0.asDomain() } }
+            .map { $0.results }
+            .mapToDomain()
     }
     
 }

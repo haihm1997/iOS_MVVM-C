@@ -27,7 +27,7 @@ public extension PrimitiveSequenceType where Element: DataRequest, Trait == Sing
                         single(.success(value.data))
                     case .failure(let error):
                         print(error)
-                        single(.error(error))
+                        single(.error(error.asDomainError()))
                     }
                 }
                 request.resume()

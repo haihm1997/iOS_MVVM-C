@@ -3,4 +3,70 @@
    uuid = "4DF735B3-BAF5-4FE4-AF12-C9E2676C0EDE"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "78FDEA2B-668C-4CCC-A306-58A400338BB2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetworkModule/Shared/Extensions/Single+Decodable+BaseResponse.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "responseDecodable(of:decoder:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4C73982D-48F7-40B4-83F4-3D9C4AB41930"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetworkModule/Shared/Extensions/Single+Decodable+BaseResponse.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "responseDecodable(of:decoder:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4C73982D-48F7-40B4-83F4-3D9C4AB41930 - abad1792414055d4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 ((RxSwift.SingleEvent&lt;A1.T&gt;) -&gt; ()) -&gt; RxSwift.Disposable in closure #1 (A.Element) -&gt; RxSwift.PrimitiveSequence&lt;RxSwift.SingleTrait, A1.T&gt; in (extension in BaseMVVM):RxSwift.PrimitiveSequenceType&lt; where A.Element: Alamofire.DataRequest, A.Trait == RxSwift.SingleTrait&gt;.responseDecodable&lt;A where A1: BaseMVVM.BaseResponse&gt;(of: A1.Type, decoder: Alamofire.DataDecoder) -&gt; RxSwift.PrimitiveSequence&lt;RxSwift.SingleTrait, A1.T&gt;"
+                  moduleName = "BaseMVVM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/teko/My%20Projects/BaseMVVM/NetworkModule/Shared/Extensions/Single+Decodable+BaseResponse.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "832">
+               </Location>
+               <Location
+                  uuid = "4C73982D-48F7-40B4-83F4-3D9C4AB41930 - b772ee777de31f6b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in closure #1 ((RxSwift.SingleEvent&lt;A1.T&gt;) -&gt; ()) -&gt; RxSwift.Disposable in closure #1 (A.Element) -&gt; RxSwift.PrimitiveSequence&lt;RxSwift.SingleTrait, A1.T&gt; in (extension in BaseMVVM):RxSwift.PrimitiveSequenceType&lt; where A.Element: Alamofire.DataRequest, A.Trait == RxSwift.SingleTrait&gt;.responseDecodable&lt;A where A1: BaseMVVM.BaseResponse&gt;(of: A1.Type, decoder: Alamofire.DataDecoder) -&gt; RxSwift.PrimitiveSequence&lt;RxSwift.SingleTrait, A1.T&gt;"
+                  moduleName = "BaseMVVM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/teko/My%20Projects/BaseMVVM/NetworkModule/Shared/Extensions/Single+Decodable+BaseResponse.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -34,31 +34,28 @@ extension NetworkError: LocalizedError {
 
 //MARK: - Mapping
 
-public protocol NetworkErrorConvertible {
-    func asNetworkError() -> NetworkError
-}
-
-extension NetworkError: NetworkErrorConvertible {
-    public func asNetworkError() -> NetworkError {
-        return self
+extension NetworkError: DomainErrorConvertible {
+    public func asDomainError() -> ProjectError {
+        return .other(error: self)
     }
 }
 
 public extension Error {
-    func asNetworkError() -> NetworkError {
-        (self as? NetworkErrorConvertible)?.asNetworkError() ?? .other(error: self)
+    func asDomainError() -> ProjectError {
+        (self as? DomainErrorConvertible)?.asDomainError() ?? .other(error: self)
     }
 }
 
-extension AFError: NetworkErrorConvertible {
-    public func asNetworkError() -> NetworkError {
+extension AFError: DomainErrorConvertible {
+    public func asDomainError() -> ProjectError {
         if let error = self.underlyingError as NSError?, error.domain == NSURLErrorDomain {
-            if error.code == -1009 {
+            if error.code == NSURLErrorNotConnectedToInternet {
                 return .lostInternetConnection
             }
             return .other(error: error)
         }
-        
-        return (self.underlyingError as? NetworkErrorConvertible)?.asNetworkError() ?? .other(error: self)
+        return (self.underlyingError as? DomainErrorConvertible)?.asDomainError() ?? .other(error: self)
     }
 }
+
+

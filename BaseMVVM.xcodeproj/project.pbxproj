@@ -10,6 +10,14 @@
 		247ACE4E53010912665FCEAC /* Pods_BaseMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84005D906925C5BFE8FA7FB8 /* Pods_BaseMVVM.framework */; };
 		6AF3BFA1C890ABF6A5042319 /* Pods_BaseMVVMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16E7780F07A0C5C317D21554 /* Pods_BaseMVVMTests.framework */; };
 		6D9EF864FDCC2A24A253E02F /* Pods_BaseMVVM_BaseMVVMUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C42C27BBE3B4DFF8A0001A /* Pods_BaseMVVM_BaseMVVMUITests.framework */; };
+		BC70C2542625AB320070AE5C /* ProjectError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC70C2532625AB320070AE5C /* ProjectError.swift */; };
+		BC70C2652625ACF70070AE5C /* Sequence+DomainMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC70C2642625ACF70070AE5C /* Sequence+DomainMapping.swift */; };
+		BC70C26A2625AD4F0070AE5C /* Single+DomainMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC70C2692625AD4F0070AE5C /* Single+DomainMapping.swift */; };
+		BC70C26F2625AE3C0070AE5C /* DomainErrorConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC70C26E2625AE3C0070AE5C /* DomainErrorConvertible.swift */; };
+		BC70C2742625B44E0070AE5C /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC70C2732625B44E0070AE5C /* ErrorTracker.swift */; };
+		BC70C2882626CCF40070AE5C /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC70C2872626CCF40070AE5C /* ErrorHandler.swift */; };
+		BC70C28E2626D4E40070AE5C /* Rx+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC70C28D2626D4E40070AE5C /* Rx+.swift */; };
+		BC70C29A2626D8CD0070AE5C /* ActivityTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC70C2992626D8CD0070AE5C /* ActivityTracker.swift */; };
 		BC7B11E7251608EA008D0E59 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7B11E6251608EA008D0E59 /* HomeViewController.swift */; };
 		BC7B122425160A3F008D0E59 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7B122325160A3F008D0E59 /* View+.swift */; };
 		BC7B122C25160AE5008D0E59 /* ViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7B122B25160AE5008D0E59 /* ViewController+.swift */; };
@@ -76,6 +84,14 @@
 		887B81408C6839453C6B2578 /* Pods-BaseMVVMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseMVVMTests.release.xcconfig"; path = "Target Support Files/Pods-BaseMVVMTests/Pods-BaseMVVMTests.release.xcconfig"; sourceTree = "<group>"; };
 		88C42C27BBE3B4DFF8A0001A /* Pods_BaseMVVM_BaseMVVMUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseMVVM_BaseMVVMUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A62267B549BC31C911461099 /* Pods-BaseMVVM-BaseMVVMUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseMVVM-BaseMVVMUITests.debug.xcconfig"; path = "Target Support Files/Pods-BaseMVVM-BaseMVVMUITests/Pods-BaseMVVM-BaseMVVMUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BC70C2532625AB320070AE5C /* ProjectError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectError.swift; sourceTree = "<group>"; };
+		BC70C2642625ACF70070AE5C /* Sequence+DomainMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+DomainMapping.swift"; sourceTree = "<group>"; };
+		BC70C2692625AD4F0070AE5C /* Single+DomainMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Single+DomainMapping.swift"; sourceTree = "<group>"; };
+		BC70C26E2625AE3C0070AE5C /* DomainErrorConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainErrorConvertible.swift; sourceTree = "<group>"; };
+		BC70C2732625B44E0070AE5C /* ErrorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
+		BC70C2872626CCF40070AE5C /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		BC70C28D2626D4E40070AE5C /* Rx+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+.swift"; sourceTree = "<group>"; };
+		BC70C2992626D8CD0070AE5C /* ActivityTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTracker.swift; sourceTree = "<group>"; };
 		BC7B11E6251608EA008D0E59 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BC7B122325160A3F008D0E59 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		BC7B122B25160AE5008D0E59 /* ViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+.swift"; sourceTree = "<group>"; };
@@ -153,6 +169,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC70C2522625AAE40070AE5C /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				BC70C2532625AB320070AE5C /* ProjectError.swift */,
+			);
+			path = Validation;
+			sourceTree = "<group>";
+		};
+		BC70C2852626CCDC0070AE5C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				BC70C2862626CCE70070AE5C /* ErrorHanding */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		BC70C2862626CCE70070AE5C /* ErrorHanding */ = {
+			isa = PBXGroup;
+			children = (
+				BC70C2872626CCF40070AE5C /* ErrorHandler.swift */,
+			);
+			path = ErrorHanding;
+			sourceTree = "<group>";
+		};
+		BC70C28C2626D4CE0070AE5C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BC70C28D2626D4E40070AE5C /* Rx+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BC70C2952626D88F0070AE5C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BC70C2732625B44E0070AE5C /* ErrorTracker.swift */,
+				BC70C2992626D8CD0070AE5C /* ActivityTracker.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		BC7B122125160A0D008D0E59 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +298,8 @@
 				BCA137752621FDEA00801770 /* Single+Validation.swift */,
 				BCA1377D2621FE3E00801770 /* Single+Decodable.swift */,
 				BCA137822621FE7200801770 /* Single+Decodable+BaseResponse.swift */,
+				BC70C2642625ACF70070AE5C /* Sequence+DomainMapping.swift */,
+				BC70C2692625AD4F0070AE5C /* Single+DomainMapping.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -346,6 +405,7 @@
 		BCB31DDF2620128F0087B5A5 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				BC70C28C2626D4CE0070AE5C /* Extensions */,
 				BCA13858262448ED00801770 /* Application */,
 				BCA13825262401BA00801770 /* Coordinator */,
 				BCA137FA2622A06400801770 /* DI */,
@@ -367,6 +427,8 @@
 		BCB31DF0262013E40087B5A5 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				BC70C2952626D88F0070AE5C /* Utils */,
+				BC70C2522625AAE40070AE5C /* Validation */,
 				BCB31DF2262013F50087B5A5 /* Adapters */,
 			);
 			path = Shared;
@@ -377,6 +439,7 @@
 			children = (
 				BCA1386926244AE100801770 /* Injector */,
 				BCB31DF32620140B0087B5A5 /* DomainConvertible.swift */,
+				BC70C26E2625AE3C0070AE5C /* DomainErrorConvertible.swift */,
 			);
 			path = Adapters;
 			sourceTree = "<group>";
@@ -425,6 +488,7 @@
 		BCCC3CA9250B73060065D7DE /* BaseMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				BC70C2852626CCDC0070AE5C /* Shared */,
 				BC7B122125160A0D008D0E59 /* Helper */,
 				BCCC3CDC250B73F20065D7DE /* Screens */,
 				BCCC3CDB250B73DC0065D7DE /* Application */,
@@ -741,6 +805,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCA1386B26244AFF00801770 /* MovieInjectorType.swift in Sources */,
+				BC70C2542625AB320070AE5C /* ProjectError.swift in Sources */,
 				BCA138122622AB0B00801770 /* AssemblerConfigs.swift in Sources */,
 				BCA137882621FF0700801770 /* MovieModel.swift in Sources */,
 				BCA13821262349B500801770 /* ViewControllerAssembly.swift in Sources */,
@@ -755,20 +820,27 @@
 				BCA1374B2621FA3500801770 /* Network.swift in Sources */,
 				BCA13828262401E400801770 /* BaseCoordinator.swift in Sources */,
 				BCA138512624453700801770 /* BaseViewController.swift in Sources */,
+				BC70C2652625ACF70070AE5C /* Sequence+DomainMapping.swift in Sources */,
 				BCA13848262422FA00801770 /* BaseViewModel.swift in Sources */,
 				BCA137902621FF9000801770 /* MovieAPIRouter.swift in Sources */,
+				BC70C2742625B44E0070AE5C /* ErrorTracker.swift in Sources */,
 				BCA1368626206B3800801770 /* Movie.swift in Sources */,
 				BC7B122425160A3F008D0E59 /* View+.swift in Sources */,
 				BCA1385A2624490C00801770 /* ExtendApplication+Services.swift in Sources */,
 				BCA137FD2622A09200801770 /* Assembler+.swift in Sources */,
 				BCA1383526241E8500801770 /* HomeCoordinator.swift in Sources */,
+				BC70C28E2626D4E40070AE5C /* Rx+.swift in Sources */,
+				BC70C29A2626D8CD0070AE5C /* ActivityTracker.swift in Sources */,
 				BCA138172622AD1500801770 /* Assembler+Service.swift in Sources */,
 				BCA137762621FDEA00801770 /* Single+Validation.swift in Sources */,
+				BC70C26A2625AD4F0070AE5C /* Single+DomainMapping.swift in Sources */,
 				BCA137832621FE7200801770 /* Single+Decodable+BaseResponse.swift in Sources */,
+				BC70C26F2625AE3C0070AE5C /* DomainErrorConvertible.swift in Sources */,
 				BC7B122C25160AE5008D0E59 /* ViewController+.swift in Sources */,
 				BCA137582621FACA00801770 /* NetworkError.swift in Sources */,
 				BCA137AA262201CF00801770 /* Configs.swift in Sources */,
 				BCA1377E2621FE3E00801770 /* Single+Decodable.swift in Sources */,
+				BC70C2882626CCF40070AE5C /* ErrorHandler.swift in Sources */,
 				BCA1386526244A3A00801770 /* ExtendApplication.swift in Sources */,
 				BCA137702621FCD700801770 /* RequestConvertible.swift in Sources */,
 				BCA1376B2621FCA200801770 /* HTTPEncoder.swift in Sources */,

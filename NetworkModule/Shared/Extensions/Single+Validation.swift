@@ -18,8 +18,10 @@ public extension PrimitiveSequenceType where Element: DataRequest, Trait == Sing
                 switch response.statusCode {
                 case 200..<300:
                     return .success(())
+                case 401:
+                    return .failure(ProjectError.tokenInvalids)
                 default:
-                    return .failure(NetworkError.undefined)
+                    return .failure(ProjectError.undefine)
                 }
             }
             return request

@@ -15,26 +15,28 @@ import NSObject_Rx
 
 class HomeViewController: BaseViewController {
     
-    let webView = WKWebView()
+    let tableView = configure(UITableView()) {
+        $0.indicatorStyle = .default
+    }
     var viewModel: HomeViewModel!
         
     override func loadView() {
         super.loadView()
         view.backgroundColor = .white
-        view.addSubviews(webView)
+        view.addSubviews(tableView)
         
-        self.webView.snp.makeConstraints { (maker) in
+        self.tableView.snp.makeConstraints { (maker) in
             maker.top.leading.trailing.bottom.equalToSuperview()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        webView.load(URLRequest(url: URL(string: "https://www.google.com.vn/")!))
         
         viewModel.outMovies.subscribe(onNext: { movies in
             print("HomeViewController: \(movies.count)")
         }).disposed(by: rx.disposeBag)
+        viewModel.outError.bind(to: ErrorHandler.defaultAlertBinder(from: self)).disposed(by: rx.disposeBag)
     }
 
 }

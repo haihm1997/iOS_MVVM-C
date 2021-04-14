@@ -19,8 +19,8 @@ public extension PrimitiveSequenceType where Element: DataRequest, Trait == Sing
                     case .success(let value):
                         single(.success(value))
                     case .failure(let error):
-                        print(error)
-                        single(.error(error))
+                        print(error.localizedDescription)
+                        single(.error(error.asDomainError()))
                     }
                 }
                 request.resume()
@@ -39,7 +39,7 @@ public extension PrimitiveSequenceType where Element: DataRequest, Trait == Sing
                     case .success(let value):
                         single(.success(value))
                     case .failure(let error):
-                        single(.error(error))
+                        single(.error(error.asDomainError()))
                     }
                 }
                 request.resume()

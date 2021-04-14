@@ -30,7 +30,8 @@ enum MovieAPIRouter: EndPointConvertible {
         switch self {
         case .movies:
             // Just for test
-            return .urlEncoder(parameters: ["api_key": "802b2c4b88ea1183e50e6b285a27696e"])
+            //return .urlEncoder(parameters: ["api_key": "802b2c4b88ea1183e50e6b285a27696e"])
+            return .urlEncoder(parameters: ["api_key": "802b2c4b88ea1183e50e6b285a276"])
         }
     }
     
