@@ -32,11 +32,15 @@ class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        bindViewModel()
+    }
+    
+    private func bindViewModel() {
         viewModel.outMovies.subscribe(onNext: { movies in
             print("HomeViewController: \(movies.count)")
         }).disposed(by: rx.disposeBag)
         viewModel.outError.bind(to: ErrorHandler.defaultAlertBinder(from: self)).disposed(by: rx.disposeBag)
+        viewModel.outActivity.bind(to: loadingBinder).disposed(by: rx.disposeBag)
     }
 
 }

@@ -10,6 +10,8 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+public let LOADING_KEY: String = "loading"
+
 final public class ActivityTracker<Activity: Hashable> {
     typealias State = [Activity: Bool]
     
