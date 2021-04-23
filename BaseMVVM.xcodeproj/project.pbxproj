@@ -57,6 +57,23 @@
 		BCCC3CB7250B73070065D7DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCCC3CB5250B73070065D7DE /* LaunchScreen.storyboard */; };
 		BCCC3CC2250B73070065D7DE /* BaseMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCC3CC1250B73070065D7DE /* BaseMVVMTests.swift */; };
 		BCCC3CCD250B73070065D7DE /* BaseMVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCC3CCC250B73070065D7DE /* BaseMVVMUITests.swift */; };
+		BCFF2E4C2631643E00BD58DD /* StarWarAPIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF2E4B2631643E00BD58DD /* StarWarAPIRouter.swift */; };
+		BCFF2E52263164F200BD58DD /* StarWarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF2E51263164F200BD58DD /* StarWarService.swift */; };
+		BCFF2E5B2631655200BD58DD /* StarShipsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF2E5A2631655200BD58DD /* StarShipsModel.swift */; };
+		BCFF2E632631658300BD58DD /* StarShipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF2E622631658300BD58DD /* StarShipModel.swift */; };
+		BCFF2E682631691200BD58DD /* StarShip.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF2E672631691200BD58DD /* StarShip.swift */; };
+		BCFF2E6D26316CFB00BD58DD /* StarWarInjectorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF2E6C26316CFB00BD58DD /* StarWarInjectorType.swift */; };
+		BCFF2E7E26317B4900BD58DD /* MovieSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF2E7D26317B4900BD58DD /* MovieSectionViewModel.swift */; };
+		BCFF2E8326317C2E00BD58DD /* StarWarSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF2E8226317C2E00BD58DD /* StarWarSectionViewModel.swift */; };
+		BCFF2E8826317F0300BD58DD /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF2E8726317F0300BD58DD /* BaseCollectionViewCell.swift */; };
+		BCFF2E9326317FA900BD58DD /* StarShipsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF2E9226317FA900BD58DD /* StarShipsSection.swift */; };
+		BCFF2E9B26317FBB00BD58DD /* MoviesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF2E9A26317FBB00BD58DD /* MoviesSection.swift */; };
+		BCFF2EA02631814100BD58DD /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF2E9F2631814100BD58DD /* UIStackView+.swift */; };
+		BCFF2EB42631888D00BD58DD /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF2EB32631888D00BD58DD /* UIImageView+.swift */; };
+		BCFF2EC82631926500BD58DD /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF2EC72631926500BD58DD /* NSObject+.swift */; };
+		BCFF2ECE263272B600BD58DD /* CommonHorizontalFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF2ECD263272B600BD58DD /* CommonHorizontalFlowLayout.swift */; };
+		BCFF2ED32632779A00BD58DD /* HomeCollectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF2ED22632779A00BD58DD /* HomeCollectionFlowLayout.swift */; };
+		BCFF2ED9263277D600BD58DD /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF2ED8263277D600BD58DD /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +154,23 @@
 		BCCC3CC8250B73070065D7DE /* BaseMVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseMVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCCC3CCC250B73070065D7DE /* BaseMVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMVVMUITests.swift; sourceTree = "<group>"; };
 		BCCC3CCE250B73070065D7DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCFF2E4B2631643E00BD58DD /* StarWarAPIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarAPIRouter.swift; sourceTree = "<group>"; };
+		BCFF2E51263164F200BD58DD /* StarWarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarService.swift; sourceTree = "<group>"; };
+		BCFF2E5A2631655200BD58DD /* StarShipsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarShipsModel.swift; sourceTree = "<group>"; };
+		BCFF2E622631658300BD58DD /* StarShipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarShipModel.swift; sourceTree = "<group>"; };
+		BCFF2E672631691200BD58DD /* StarShip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarShip.swift; sourceTree = "<group>"; };
+		BCFF2E6C26316CFB00BD58DD /* StarWarInjectorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarInjectorType.swift; sourceTree = "<group>"; };
+		BCFF2E7D26317B4900BD58DD /* MovieSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSectionViewModel.swift; sourceTree = "<group>"; };
+		BCFF2E8226317C2E00BD58DD /* StarWarSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarSectionViewModel.swift; sourceTree = "<group>"; };
+		BCFF2E8726317F0300BD58DD /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		BCFF2E9226317FA900BD58DD /* StarShipsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarShipsSection.swift; sourceTree = "<group>"; };
+		BCFF2E9A26317FBB00BD58DD /* MoviesSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesSection.swift; sourceTree = "<group>"; };
+		BCFF2E9F2631814100BD58DD /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
+		BCFF2EB32631888D00BD58DD /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
+		BCFF2EC72631926500BD58DD /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
+		BCFF2ECD263272B600BD58DD /* CommonHorizontalFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonHorizontalFlowLayout.swift; sourceTree = "<group>"; };
+		BCFF2ED22632779A00BD58DD /* HomeCollectionFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionFlowLayout.swift; sourceTree = "<group>"; };
+		BCFF2ED8263277D600BD58DD /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D9A18B0AECF408B540EBFF13 /* Pods-BaseMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseMVVM.release.xcconfig"; path = "Target Support Files/Pods-BaseMVVM/Pods-BaseMVVM.release.xcconfig"; sourceTree = "<group>"; };
 		F73D9ABCE7A33E0E31A7BF5A /* Pods-BaseMVVM-BaseMVVMUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseMVVM-BaseMVVMUITests.release.xcconfig"; path = "Target Support Files/Pods-BaseMVVM-BaseMVVMUITests/Pods-BaseMVVM-BaseMVVMUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -180,6 +214,7 @@
 		BC70C2852626CCDC0070AE5C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				BCFF2ED7263277CC00BD58DD /* Constant */,
 				BC70C2862626CCE70070AE5C /* ErrorHanding */,
 			);
 			path = Shared;
@@ -223,6 +258,9 @@
 			children = (
 				BC7B122325160A3F008D0E59 /* View+.swift */,
 				BC7B122B25160AE5008D0E59 /* ViewController+.swift */,
+				BCFF2E9F2631814100BD58DD /* UIStackView+.swift */,
+				BCFF2EB32631888D00BD58DD /* UIImageView+.swift */,
+				BCFF2EC72631926500BD58DD /* NSObject+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -241,6 +279,7 @@
 		BCA137112621F95100801770 /* APIRouters */ = {
 			isa = PBXGroup;
 			children = (
+				BCFF2E4A2631641C00BD58DD /* StarWars */,
 				BCA137142621F95100801770 /* Movies */,
 			);
 			path = APIRouters;
@@ -267,6 +306,7 @@
 		BCA137222621F95100801770 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BCFF2E592631654000BD58DD /* StarWar */,
 				BCA137232621F95100801770 /* Movie */,
 			);
 			path = Models;
@@ -317,6 +357,7 @@
 		BCA137972622006C00801770 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				BCFF2E50263164DC00BD58DD /* StarWar */,
 				BCA137982622008F00801770 /* Movie */,
 			);
 			path = Services;
@@ -381,6 +422,7 @@
 			isa = PBXGroup;
 			children = (
 				BCA138502624453700801770 /* BaseViewController.swift */,
+				BCFF2E8726317F0300BD58DD /* BaseCollectionViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -398,6 +440,7 @@
 			isa = PBXGroup;
 			children = (
 				BCA1386A26244AFF00801770 /* MovieInjectorType.swift */,
+				BCFF2E6C26316CFB00BD58DD /* StarWarInjectorType.swift */,
 			);
 			path = Injector;
 			sourceTree = "<group>";
@@ -420,6 +463,7 @@
 			isa = PBXGroup;
 			children = (
 				BCA1368526206B3800801770 /* Movie.swift */,
+				BCFF2E672631691200BD58DD /* StarShip.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -456,6 +500,7 @@
 		BCB31E1626203BCF0087B5A5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				BCFF2E7126317A9D00BD58DD /* Cells */,
 				BCB31E1726203BEA0087B5A5 /* HomeViewModel.swift */,
 			);
 			path = Home;
@@ -528,6 +573,7 @@
 		BCCC3CDC250B73F20065D7DE /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				BCFF2ECC2632726000BD58DD /* FlowLayouts */,
 				BCA1384F2624452B00801770 /* Base */,
 				BCCC3CDD250B73FB0065D7DE /* Home */,
 			);
@@ -537,9 +583,70 @@
 		BCCC3CDD250B73FB0065D7DE /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				BCFF2E8C26317F7200BD58DD /* Cells */,
 				BC7B11E6251608EA008D0E59 /* HomeViewController.swift */,
+				BCFF2ED22632779A00BD58DD /* HomeCollectionFlowLayout.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		BCFF2E4A2631641C00BD58DD /* StarWars */ = {
+			isa = PBXGroup;
+			children = (
+				BCFF2E4B2631643E00BD58DD /* StarWarAPIRouter.swift */,
+			);
+			path = StarWars;
+			sourceTree = "<group>";
+		};
+		BCFF2E50263164DC00BD58DD /* StarWar */ = {
+			isa = PBXGroup;
+			children = (
+				BCFF2E51263164F200BD58DD /* StarWarService.swift */,
+			);
+			path = StarWar;
+			sourceTree = "<group>";
+		};
+		BCFF2E592631654000BD58DD /* StarWar */ = {
+			isa = PBXGroup;
+			children = (
+				BCFF2E5A2631655200BD58DD /* StarShipsModel.swift */,
+				BCFF2E622631658300BD58DD /* StarShipModel.swift */,
+			);
+			path = StarWar;
+			sourceTree = "<group>";
+		};
+		BCFF2E7126317A9D00BD58DD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BCFF2E7D26317B4900BD58DD /* MovieSectionViewModel.swift */,
+				BCFF2E8226317C2E00BD58DD /* StarWarSectionViewModel.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BCFF2E8C26317F7200BD58DD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BCFF2E9226317FA900BD58DD /* StarShipsSection.swift */,
+				BCFF2E9A26317FBB00BD58DD /* MoviesSection.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BCFF2ECC2632726000BD58DD /* FlowLayouts */ = {
+			isa = PBXGroup;
+			children = (
+				BCFF2ECD263272B600BD58DD /* CommonHorizontalFlowLayout.swift */,
+			);
+			path = FlowLayouts;
+			sourceTree = "<group>";
+		};
+		BCFF2ED7263277CC00BD58DD /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				BCFF2ED8263277D600BD58DD /* Constant.swift */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 		CDEEB577C722CFED64075CC9 /* Pods */ = {
@@ -811,11 +918,13 @@
 				BCA13821262349B500801770 /* ViewControllerAssembly.swift in Sources */,
 				BCA1381C262346A000801770 /* ViewModelAssembly.swift in Sources */,
 				BCA1375D2621FB3600801770 /* NetworkLogger.swift in Sources */,
+				BCFF2E682631691200BD58DD /* StarShip.swift in Sources */,
 				BCA138052622A10500801770 /* ServiceAssembly.swift in Sources */,
 				BCB31DF42620140B0087B5A5 /* DomainConvertible.swift in Sources */,
 				BCA137A5262200BD00801770 /* MovieService.swift in Sources */,
 				BCA138302624067500801770 /* AppCoordinator.swift in Sources */,
 				BCCC3CAB250B73060065D7DE /* AppDelegate.swift in Sources */,
+				BCFF2EC82631926500BD58DD /* NSObject+.swift in Sources */,
 				BCB31E1826203BEA0087B5A5 /* HomeViewModel.swift in Sources */,
 				BCA1374B2621FA3500801770 /* Network.swift in Sources */,
 				BCA13828262401E400801770 /* BaseCoordinator.swift in Sources */,
@@ -827,24 +936,39 @@
 				BCA1368626206B3800801770 /* Movie.swift in Sources */,
 				BC7B122425160A3F008D0E59 /* View+.swift in Sources */,
 				BCA1385A2624490C00801770 /* ExtendApplication+Services.swift in Sources */,
+				BCFF2ED32632779A00BD58DD /* HomeCollectionFlowLayout.swift in Sources */,
+				BCFF2E6D26316CFB00BD58DD /* StarWarInjectorType.swift in Sources */,
 				BCA137FD2622A09200801770 /* Assembler+.swift in Sources */,
 				BCA1383526241E8500801770 /* HomeCoordinator.swift in Sources */,
+				BCFF2E9326317FA900BD58DD /* StarShipsSection.swift in Sources */,
 				BC70C28E2626D4E40070AE5C /* Rx+.swift in Sources */,
 				BC70C29A2626D8CD0070AE5C /* ActivityTracker.swift in Sources */,
+				BCFF2EA02631814100BD58DD /* UIStackView+.swift in Sources */,
 				BCA138172622AD1500801770 /* Assembler+Service.swift in Sources */,
 				BCA137762621FDEA00801770 /* Single+Validation.swift in Sources */,
 				BC70C26A2625AD4F0070AE5C /* Single+DomainMapping.swift in Sources */,
 				BCA137832621FE7200801770 /* Single+Decodable+BaseResponse.swift in Sources */,
 				BC70C26F2625AE3C0070AE5C /* DomainErrorConvertible.swift in Sources */,
+				BCFF2E52263164F200BD58DD /* StarWarService.swift in Sources */,
 				BC7B122C25160AE5008D0E59 /* ViewController+.swift in Sources */,
 				BCA137582621FACA00801770 /* NetworkError.swift in Sources */,
+				BCFF2ECE263272B600BD58DD /* CommonHorizontalFlowLayout.swift in Sources */,
+				BCFF2E8826317F0300BD58DD /* BaseCollectionViewCell.swift in Sources */,
+				BCFF2E632631658300BD58DD /* StarShipModel.swift in Sources */,
+				BCFF2E8326317C2E00BD58DD /* StarWarSectionViewModel.swift in Sources */,
 				BCA137AA262201CF00801770 /* Configs.swift in Sources */,
 				BCA1377E2621FE3E00801770 /* Single+Decodable.swift in Sources */,
+				BCFF2ED9263277D600BD58DD /* Constant.swift in Sources */,
+				BCFF2EB42631888D00BD58DD /* UIImageView+.swift in Sources */,
+				BCFF2E4C2631643E00BD58DD /* StarWarAPIRouter.swift in Sources */,
+				BCFF2E7E26317B4900BD58DD /* MovieSectionViewModel.swift in Sources */,
 				BC70C2882626CCF40070AE5C /* ErrorHandler.swift in Sources */,
 				BCA1386526244A3A00801770 /* ExtendApplication.swift in Sources */,
 				BCA137702621FCD700801770 /* RequestConvertible.swift in Sources */,
+				BCFF2E9B26317FBB00BD58DD /* MoviesSection.swift in Sources */,
 				BCA1376B2621FCA200801770 /* HTTPEncoder.swift in Sources */,
 				BCA137632621FC6600801770 /* EndpointConvertible.swift in Sources */,
+				BCFF2E5B2631655200BD58DD /* StarShipsModel.swift in Sources */,
 				BC7B11E7251608EA008D0E59 /* HomeViewController.swift in Sources */,
 				BCA137532621FA7F00801770 /* NetworkConfiguration.swift in Sources */,
 			);

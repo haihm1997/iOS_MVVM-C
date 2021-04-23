@@ -16,3 +16,11 @@ public struct Movie {
     let releaseDate: String
     let vote: Double
 }
+
+extension Movie {
+    
+    var imageUrl: String {
+        return "https://image.tmdb.org/t/p/w185\(backdropPath)"
+    }
+    
+}

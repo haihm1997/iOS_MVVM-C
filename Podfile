@@ -12,6 +12,8 @@ target 'BaseMVVM' do
     pod 'Swinject'
     pod 'NSObject+Rx'
     pod 'MBProgressHUD', '~> 1.2.0'
+    pod 'Kingfisher', '~> 6.0'
+    pod 'RxDataSources'
 
   target 'BaseMVVMTests' do
     inherit! :search_paths

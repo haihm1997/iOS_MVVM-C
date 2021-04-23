@@ -10,6 +10,7 @@ import Foundation
 
 public enum AssemblerName: String {
     case movieService
+    case starWar
     
     public var named: String {
         return self.rawValue

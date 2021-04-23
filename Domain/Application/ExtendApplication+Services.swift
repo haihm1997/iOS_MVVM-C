@@ -16,3 +16,11 @@ extension ExtendApplication: MovieInjectorType {
     }
     
 }
+
+extension ExtendApplication: StarWarInjectorType {
+    
+    public func getStarWarService() -> StarWarServiceType {
+        return starWarService
+    }
+    
+}

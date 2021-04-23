@@ -14,5 +14,6 @@ public class ExtendApplication {
     public static let shared = ExtendApplication()
     
     let movieService = Assembler.resolve(MovieServiceType.self)!
+    let starWarService = Assembler.resolve(StarWarServiceType.self)!
     
 }

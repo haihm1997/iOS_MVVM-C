@@ -14,7 +14,8 @@ struct ViewModelAssembly: Assembly {
     func assemble(container: Container) {
         
         container.register(HomeViewModel.self) { resolver in
-            return HomeViewModel(injector: ExtendApplication.shared)
+            return HomeViewModel(movieInjector: ExtendApplication.shared,
+                                 starWarInjector: ExtendApplication.shared)
         }
         
     }

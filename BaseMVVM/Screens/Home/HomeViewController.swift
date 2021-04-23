@@ -12,20 +12,52 @@ import RxCocoa
 import WebKit
 import RxSwift
 import NSObject_Rx
+import RxDataSources
+
+enum HomeSectionIdentifier: String, CaseIterable {
+    case movies
+    case starships
+
+    static func identifider(for section: HomeSection) -> HomeSectionIdentifier {
+        switch section {
+        case .movies:
+            return .movies
+        case .starships:
+            return .starships
+        }
+    }
+    
+    var cellType: BaseCollectionViewCell.Type {
+        switch self {
+        case .movies:
+            return MoviesSection.self
+        case .starships:
+            return StarShipSection.self
+        }
+    }
+    
+}
 
 class HomeViewController: BaseViewController {
     
-    let tableView = configure(UITableView()) {
-        $0.indicatorStyle = .default
-    }
+    private lazy var collectionView: UICollectionView = {
+        let layout = HomeCollectionFlowLayout()
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundColor = .clear
+        HomeSectionIdentifier.allCases.forEach { collectionView.register($0.cellType, forCellWithReuseIdentifier: $0.rawValue) }
+        return collectionView
+    }()
     var viewModel: HomeViewModel!
+    private typealias Section = SectionModel<String, HomeSection>
+    private typealias DataSource = RxCollectionViewSectionedReloadDataSource<Section>
+    private lazy var dataSource = self.createDataSource()
         
     override func loadView() {
         super.loadView()
         view.backgroundColor = .white
-        view.addSubviews(tableView)
+        view.addSubviews(collectionView)
         
-        self.tableView.snp.makeConstraints { (maker) in
+        self.collectionView.snp.makeConstraints { (maker) in
             maker.top.leading.trailing.bottom.equalToSuperview()
         }
     }
@@ -36,11 +68,27 @@ class HomeViewController: BaseViewController {
     }
     
     private func bindViewModel() {
-        viewModel.outMovies.subscribe(onNext: { movies in
-            print("HomeViewController: \(movies.count)")
-        }).disposed(by: rx.disposeBag)
+        viewModel.outAllSections.map { [Section(model: "", items: $0)] }
+            .bind(to: collectionView.rx.items(dataSource: dataSource))
+            .disposed(by: rx.disposeBag)
         viewModel.outError.bind(to: ErrorHandler.defaultAlertBinder(from: self)).disposed(by: rx.disposeBag)
         viewModel.outActivity.bind(to: loadingBinder).disposed(by: rx.disposeBag)
     }
 
+    private func createDataSource() -> DataSource {
+        let dataSource = DataSource (configureCell: { (_, collectionView, indexPath, section) -> UICollectionViewCell in
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeSectionIdentifier.identifider(for: section).rawValue, for: indexPath)
+            
+            switch section {
+            case .movies(let viewModel):
+                (cell as! MoviesSection).bind(viewModel)
+            case .starships(let viewModel):
+                (cell as! StarShipSection).bind(viewModel)
+            }
+            return cell
+        })
+        
+        return dataSource
+    }
+    
 }

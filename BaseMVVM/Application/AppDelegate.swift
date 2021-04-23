@@ -15,7 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let _ = ServiceManager.shared
         
         let window = UIWindow(frame: UIScreen.main.bounds)
         let appCoordinator = AppCoordinator(window: window)
@@ -26,15 +25,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
-
-class ServiceManager {
-    
-    static let shared = ServiceManager()
-    
-    func movieService() -> MovieServiceType {
-        return Assembler.resolve(MovieServiceType.self)!
-    }
-}
-
 
 
