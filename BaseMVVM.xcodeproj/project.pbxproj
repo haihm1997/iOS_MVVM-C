@@ -74,6 +74,7 @@
 		BCFF2ECE263272B600BD58DD /* CommonHorizontalFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF2ECD263272B600BD58DD /* CommonHorizontalFlowLayout.swift */; };
 		BCFF2ED32632779A00BD58DD /* HomeCollectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF2ED22632779A00BD58DD /* HomeCollectionFlowLayout.swift */; };
 		BCFF2ED9263277D600BD58DD /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF2ED8263277D600BD58DD /* Constant.swift */; };
+		BCFF2EF32632AD7200BD58DD /* LeakFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF2EF22632AD7200BD58DD /* LeakFinder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +172,7 @@
 		BCFF2ECD263272B600BD58DD /* CommonHorizontalFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonHorizontalFlowLayout.swift; sourceTree = "<group>"; };
 		BCFF2ED22632779A00BD58DD /* HomeCollectionFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionFlowLayout.swift; sourceTree = "<group>"; };
 		BCFF2ED8263277D600BD58DD /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		BCFF2EF22632AD7200BD58DD /* LeakFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeakFinder.swift; sourceTree = "<group>"; };
 		D9A18B0AECF408B540EBFF13 /* Pods-BaseMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseMVVM.release.xcconfig"; path = "Target Support Files/Pods-BaseMVVM/Pods-BaseMVVM.release.xcconfig"; sourceTree = "<group>"; };
 		F73D9ABCE7A33E0E31A7BF5A /* Pods-BaseMVVM-BaseMVVMUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseMVVM-BaseMVVMUITests.release.xcconfig"; path = "Target Support Files/Pods-BaseMVVM-BaseMVVMUITests/Pods-BaseMVVM-BaseMVVMUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -533,6 +535,7 @@
 		BCCC3CA9250B73060065D7DE /* BaseMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				BCFF2EF12632AD5B00BD58DD /* Debuging */,
 				BC70C2852626CCDC0070AE5C /* Shared */,
 				BC7B122125160A0D008D0E59 /* Helper */,
 				BCCC3CDC250B73F20065D7DE /* Screens */,
@@ -647,6 +650,14 @@
 				BCFF2ED8263277D600BD58DD /* Constant.swift */,
 			);
 			path = Constant;
+			sourceTree = "<group>";
+		};
+		BCFF2EF12632AD5B00BD58DD /* Debuging */ = {
+			isa = PBXGroup;
+			children = (
+				BCFF2EF22632AD7200BD58DD /* LeakFinder.swift */,
+			);
+			path = Debuging;
 			sourceTree = "<group>";
 		};
 		CDEEB577C722CFED64075CC9 /* Pods */ = {
@@ -955,6 +966,7 @@
 				BCFF2ECE263272B600BD58DD /* CommonHorizontalFlowLayout.swift in Sources */,
 				BCFF2E8826317F0300BD58DD /* BaseCollectionViewCell.swift in Sources */,
 				BCFF2E632631658300BD58DD /* StarShipModel.swift in Sources */,
+				BCFF2EF32632AD7200BD58DD /* LeakFinder.swift in Sources */,
 				BCFF2E8326317C2E00BD58DD /* StarWarSectionViewModel.swift in Sources */,
 				BCA137AA262201CF00801770 /* Configs.swift in Sources */,
 				BCA1377E2621FE3E00801770 /* Single+Decodable.swift in Sources */,
