@@ -24,6 +24,7 @@ class StarShipSection: BaseCollectionViewCell {
     }()
     
     var viewModel: StarWarSectionViewModel!
+    var disposeBag = DisposeBag()
     
     override func setupViews() {
         super.setupViews()
@@ -33,13 +34,18 @@ class StarShipSection: BaseCollectionViewCell {
         }
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        disposeBag = DisposeBag()
+    }
+    
     func bind(_ viewModel: StarWarSectionViewModel) {
         self.viewModel = viewModel
         
         Observable.just(viewModel.data).bind(to: collectionView.rx.items(cellIdentifier: StarShipCell.className, cellType: StarShipCell.self)) {
             _, item, cell in
             cell.bind(item)
-        }.disposed(by: rx.disposeBag)
+        }.disposed(by: disposeBag)
     }
     
 }

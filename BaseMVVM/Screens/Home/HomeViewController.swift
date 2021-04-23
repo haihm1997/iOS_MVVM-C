@@ -78,7 +78,6 @@ class HomeViewController: BaseViewController {
     private func createDataSource() -> DataSource {
         let dataSource = DataSource (configureCell: { (_, collectionView, indexPath, section) -> UICollectionViewCell in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeSectionIdentifier.identifider(for: section).rawValue, for: indexPath)
-            
             switch section {
             case .movies(let viewModel):
                 (cell as! MoviesSection).bind(viewModel)
