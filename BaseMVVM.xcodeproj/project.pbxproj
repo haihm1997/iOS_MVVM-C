@@ -454,7 +454,6 @@
 				BCA13858262448ED00801770 /* Application */,
 				BCA13825262401BA00801770 /* Coordinator */,
 				BCA137FA2622A06400801770 /* DI */,
-				BCB31E1526203BBE0087B5A5 /* Business */,
 				BCB31DF0262013E40087B5A5 /* Shared */,
 				BCB31DE0262012A30087B5A5 /* Models */,
 			);
@@ -490,13 +489,13 @@
 			path = Adapters;
 			sourceTree = "<group>";
 		};
-		BCB31E1526203BBE0087B5A5 /* Business */ = {
+		BCB31E1526203BBE0087B5A5 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				BCA13846262422EC00801770 /* Base */,
 				BCB31E1626203BCF0087B5A5 /* Home */,
 			);
-			path = Business;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		BCB31E1626203BCF0087B5A5 /* Home */ = {
@@ -539,6 +538,7 @@
 				BC70C2852626CCDC0070AE5C /* Shared */,
 				BC7B122125160A0D008D0E59 /* Helper */,
 				BCCC3CDC250B73F20065D7DE /* Screens */,
+				BCB31E1526203BBE0087B5A5 /* ViewModels */,
 				BCCC3CDB250B73DC0065D7DE /* Application */,
 				BCCC3CB3250B73070065D7DE /* Assets.xcassets */,
 				BCCC3CB5250B73070065D7DE /* LaunchScreen.storyboard */,
@@ -576,8 +576,8 @@
 		BCCC3CDC250B73F20065D7DE /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				BCFF2ECC2632726000BD58DD /* FlowLayouts */,
 				BCA1384F2624452B00801770 /* Base */,
+				BCFF2ECC2632726000BD58DD /* FlowLayouts */,
 				BCCC3CDD250B73FB0065D7DE /* Home */,
 			);
 			path = Screens;
