@@ -10,6 +10,7 @@
 		247ACE4E53010912665FCEAC /* Pods_BaseMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84005D906925C5BFE8FA7FB8 /* Pods_BaseMVVM.framework */; };
 		6AF3BFA1C890ABF6A5042319 /* Pods_BaseMVVMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16E7780F07A0C5C317D21554 /* Pods_BaseMVVMTests.framework */; };
 		6D9EF864FDCC2A24A253E02F /* Pods_BaseMVVM_BaseMVVMUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C42C27BBE3B4DFF8A0001A /* Pods_BaseMVVM_BaseMVVMUITests.framework */; };
+		BC308BEB263A6A000063C7BC /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC308BEA263A6A000063C7BC /* UIImage+.swift */; };
 		BC70C2542625AB320070AE5C /* ProjectError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC70C2532625AB320070AE5C /* ProjectError.swift */; };
 		BC70C2652625ACF70070AE5C /* Sequence+DomainMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC70C2642625ACF70070AE5C /* Sequence+DomainMapping.swift */; };
 		BC70C26A2625AD4F0070AE5C /* Single+DomainMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC70C2692625AD4F0070AE5C /* Single+DomainMapping.swift */; };
@@ -102,6 +103,7 @@
 		887B81408C6839453C6B2578 /* Pods-BaseMVVMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseMVVMTests.release.xcconfig"; path = "Target Support Files/Pods-BaseMVVMTests/Pods-BaseMVVMTests.release.xcconfig"; sourceTree = "<group>"; };
 		88C42C27BBE3B4DFF8A0001A /* Pods_BaseMVVM_BaseMVVMUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseMVVM_BaseMVVMUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A62267B549BC31C911461099 /* Pods-BaseMVVM-BaseMVVMUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseMVVM-BaseMVVMUITests.debug.xcconfig"; path = "Target Support Files/Pods-BaseMVVM-BaseMVVMUITests/Pods-BaseMVVM-BaseMVVMUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BC308BEA263A6A000063C7BC /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		BC70C2532625AB320070AE5C /* ProjectError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectError.swift; sourceTree = "<group>"; };
 		BC70C2642625ACF70070AE5C /* Sequence+DomainMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+DomainMapping.swift"; sourceTree = "<group>"; };
 		BC70C2692625AD4F0070AE5C /* Single+DomainMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Single+DomainMapping.swift"; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				BCFF2E9F2631814100BD58DD /* UIStackView+.swift */,
 				BCFF2EB32631888D00BD58DD /* UIImageView+.swift */,
 				BCFF2EC72631926500BD58DD /* NSObject+.swift */,
+				BC308BEA263A6A000063C7BC /* UIImage+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -949,6 +952,7 @@
 				BCA1385A2624490C00801770 /* ExtendApplication+Services.swift in Sources */,
 				BCFF2ED32632779A00BD58DD /* HomeCollectionFlowLayout.swift in Sources */,
 				BCFF2E6D26316CFB00BD58DD /* StarWarInjectorType.swift in Sources */,
+				BC308BEB263A6A000063C7BC /* UIImage+.swift in Sources */,
 				BCA137FD2622A09200801770 /* Assembler+.swift in Sources */,
 				BCA1383526241E8500801770 /* HomeCoordinator.swift in Sources */,
 				BCFF2E9326317FA900BD58DD /* StarShipsSection.swift in Sources */,
