@@ -8,25 +8,24 @@
 
 import Foundation
 import Swinject
+import RxSwift
 
-public class HomeCoordinator: BaseCoordinator {
+class HomeCoordinator: ReactiveCoordinator<Void> {
     
     let window: UIWindow?
-    var controller: UIViewController?
+    var nav: UINavigationController?
     
     public init(window: UIWindow?) {
         self.window = window
     }
     
-    override func start() {
-        guard let homeVC = Assembler.resolve(HomeViewController.self) else { return }
-        self.controller = homeVC
-        window?.rootViewController = homeVC
+    public override func start() -> Observable<Void> {
+        let homeVC = Assembler.resolve(HomeViewController.self)!
+        let nav = UINavigationController(rootViewController: homeVC)
+        self.nav = nav
+        window?.rootViewController = nav
         window?.makeKeyAndVisible()
-    }
-    
-    override func finish() {
-        removeChildCoordinator(self)
+        return Observable.never()
     }
     
 }

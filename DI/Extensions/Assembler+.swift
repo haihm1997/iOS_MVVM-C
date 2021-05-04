@@ -14,7 +14,8 @@ extension Assembler {
         let container = Container()
         let assembler = Assembler([ServiceAssembly(),
                                    ViewModelAssembly(),
-                                   ViewControllerAssembly()],
+                                   ViewControllerAssembly(),
+                                   UserCaseAssembly()],
                                   container: container)
         return assembler
     }()

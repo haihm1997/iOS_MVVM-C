@@ -6,11 +6,11 @@
 //  Copyright © 2021 TonyHoang. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import Swinject
+import RxSwift
 
-public class AppCoordinator: BaseCoordinator {
+class AppCoordinator: ReactiveCoordinator<Void> {
     
     let window: UIWindow?
     
@@ -18,14 +18,9 @@ public class AppCoordinator: BaseCoordinator {
         self.window = window
     }
     
-    override func start() {
+    override func start() -> Observable<Void> {
         let homeCoordinator = HomeCoordinator(window: window)
-        homeCoordinator.start()
-        addChildCoordinator(homeCoordinator)
-    }
-    
-    override func finish() {
-        removeAllChildCoordinator()
+        return coordinate(to: homeCoordinator)
     }
     
 }

@@ -11,8 +11,6 @@ import RxSwift
 import RxRelay
 import Alamofire
 
-protocol HomeSectionType { }
-
 enum HomeSection {
     case movies(viewModel: MovieSectionViewModel)
     case starships(viewModel: StarWarSectionViewModel)
@@ -25,48 +23,30 @@ class HomeViewModel: BaseViewModel {
     var outError: Observable<ProjectError>
     var outActivity: Observable<Bool>
     
-    init(movieInjector: MovieInjectorType, starWarInjector: StarWarInjectorType) {
+    init(blockUserCase: BlockUseCaseType,
+         movieUserCase: MovieUserCaseType,
+         starWarUserCase: StarWarUserCaseType) {
         let errorTracker = ErrorTracker()
         let activityTracker = ActivityTracker<String>()
         outError = errorTracker.asDomain()
         outActivity = activityTracker.status(for: LOADING_KEY)
         super.init()
-        let movieObservable = movieInjector.getMovieService()
-            .fetchPopularMovies()
-            .asObservable()
         
-        let starWarObservable = starWarInjector.getStarWarService()
-            .fetchStarships(by: "a")
-            .asObservable()
-        
-        let movieObservable2 = movieInjector.getMovieService()
-            .fetchPopularMovies()
-            .asObservable()
-        
-        let starWarObservable2 = starWarInjector.getStarWarService()
-            .fetchStarships(by: "b")
-            .asObservable()
-        
-        let starWarObservable3 = starWarInjector.getStarWarService()
-            .fetchStarships(by: "c")
-            .asObservable()
-
-        Observable.combineLatest(movieObservable, starWarObservable, movieObservable2, starWarObservable2, starWarObservable3)
-            .trackError(with: errorTracker)
-            .trackActivity(LOADING_KEY, with: activityTracker)
-            .map { movies, starships, movies2, starship2, starship3 -> [HomeSection] in
-                let movieViewModel = MovieSectionViewModel(data: movies)
-                let starWarViewModel = StarWarSectionViewModel(data: starships)
-                let movie2ViewModel = MovieSectionViewModel(data: movies2)
-                let starWar2ViewModel = StarWarSectionViewModel(data: starship2)
-                let starWar3ViewModel = StarWarSectionViewModel(data: starship3)
-                return [.movies(viewModel: movieViewModel),
-                        .starships(viewModel: starWarViewModel),
-                        .movies(viewModel: movie2ViewModel),
-                        .starships(viewModel: starWar2ViewModel),
-                        .starships(viewModel: starWar3ViewModel)]
-            }.bind(to: outAllSections)
-            .disposed(by: rx.disposeBag)
+        blockUserCase.fetchBlocks().subscribe(onNext: { blocks in
+            let movieObservables = Observable<[Movie]>.combineLatest(blocks.movieBlocks.map { _ in movieUserCase.fetchPopularMovies() })
+            let starshipObservables = Observable<[StarShip]>.combineLatest(blocks.starShipBlocks.map { block in
+                starWarUserCase.fetchStarships(by: block.query ?? "")
+            })
+            Observable.combineLatest(movieObservables, starshipObservables)
+                .trackError(with: errorTracker)
+                .trackActivity(LOADING_KEY, with: activityTracker)
+                .map { movies, starships -> [HomeSection] in
+                    let movieViewModels = movies.compactMap { MovieSectionViewModel(data: $0) }.map { HomeSection.movies(viewModel: $0) }
+                    let starWarViewModels = starships.compactMap { StarWarSectionViewModel(data: $0) }.map { HomeSection.starships(viewModel: $0) }
+                    return movieViewModels + starWarViewModels
+                }.bind(to: self.outAllSections)
+                .disposed(by: self.rx.disposeBag)
+        }).disposed(by: rx.disposeBag)
         
     }
     

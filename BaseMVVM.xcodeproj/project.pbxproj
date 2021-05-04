@@ -43,7 +43,6 @@
 		BCA138172622AD1500801770 /* Assembler+Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA138162622AD1500801770 /* Assembler+Service.swift */; };
 		BCA1381C262346A000801770 /* ViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA1381B262346A000801770 /* ViewModelAssembly.swift */; };
 		BCA13821262349B500801770 /* ViewControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA13820262349B500801770 /* ViewControllerAssembly.swift */; };
-		BCA13828262401E400801770 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA13827262401E400801770 /* BaseCoordinator.swift */; };
 		BCA138302624067500801770 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA1382F2624067500801770 /* AppCoordinator.swift */; };
 		BCA1383526241E8500801770 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA1383426241E8500801770 /* HomeCoordinator.swift */; };
 		BCA13848262422FA00801770 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA13847262422FA00801770 /* BaseViewModel.swift */; };
@@ -58,6 +57,11 @@
 		BCCC3CB7250B73070065D7DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCCC3CB5250B73070065D7DE /* LaunchScreen.storyboard */; };
 		BCCC3CC2250B73070065D7DE /* BaseMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCC3CC1250B73070065D7DE /* BaseMVVMTests.swift */; };
 		BCCC3CCD250B73070065D7DE /* BaseMVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCC3CCC250B73070065D7DE /* BaseMVVMUITests.swift */; };
+		BCE1E6F926404932008774FA /* ReactiveCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1E6F826404932008774FA /* ReactiveCoordinator.swift */; };
+		BCE1E6FF26404F76008774FA /* BlockUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1E6FE26404F76008774FA /* BlockUseCase.swift */; };
+		BCE1E7362640520D008774FA /* MovieUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1E7352640520D008774FA /* MovieUseCase.swift */; };
+		BCE1E73B2640530B008774FA /* StarWarUserCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1E73A2640530B008774FA /* StarWarUserCase.swift */; };
+		BCE1E74026405443008774FA /* UserCaseAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1E73F26405443008774FA /* UserCaseAssembly.swift */; };
 		BCFF2E4C2631643E00BD58DD /* StarWarAPIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF2E4B2631643E00BD58DD /* StarWarAPIRouter.swift */; };
 		BCFF2E52263164F200BD58DD /* StarWarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF2E51263164F200BD58DD /* StarWarService.swift */; };
 		BCFF2E5B2631655200BD58DD /* StarShipsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF2E5A2631655200BD58DD /* StarShipsModel.swift */; };
@@ -136,7 +140,6 @@
 		BCA138162622AD1500801770 /* Assembler+Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assembler+Service.swift"; sourceTree = "<group>"; };
 		BCA1381B262346A000801770 /* ViewModelAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelAssembly.swift; sourceTree = "<group>"; };
 		BCA13820262349B500801770 /* ViewControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAssembly.swift; sourceTree = "<group>"; };
-		BCA13827262401E400801770 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		BCA1382F2624067500801770 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		BCA1383426241E8500801770 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		BCA13847262422FA00801770 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
@@ -157,6 +160,11 @@
 		BCCC3CC8250B73070065D7DE /* BaseMVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseMVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCCC3CCC250B73070065D7DE /* BaseMVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMVVMUITests.swift; sourceTree = "<group>"; };
 		BCCC3CCE250B73070065D7DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCE1E6F826404932008774FA /* ReactiveCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveCoordinator.swift; sourceTree = "<group>"; };
+		BCE1E6FE26404F76008774FA /* BlockUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockUseCase.swift; sourceTree = "<group>"; };
+		BCE1E7352640520D008774FA /* MovieUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieUseCase.swift; sourceTree = "<group>"; };
+		BCE1E73A2640530B008774FA /* StarWarUserCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarUserCase.swift; sourceTree = "<group>"; };
+		BCE1E73F26405443008774FA /* UserCaseAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCaseAssembly.swift; sourceTree = "<group>"; };
 		BCFF2E4B2631643E00BD58DD /* StarWarAPIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarAPIRouter.swift; sourceTree = "<group>"; };
 		BCFF2E51263164F200BD58DD /* StarWarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarService.swift; sourceTree = "<group>"; };
 		BCFF2E5A2631655200BD58DD /* StarShipsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarShipsModel.swift; sourceTree = "<group>"; };
@@ -207,6 +215,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC4B5A22263EC602005929CE /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				BCE1E6FD26404F28008774FA /* Home */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
 		BC70C2522625AAE40070AE5C /* Validation */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,6 +399,7 @@
 				BCA138042622A10500801770 /* ServiceAssembly.swift */,
 				BCA1381B262346A000801770 /* ViewModelAssembly.swift */,
 				BCA13820262349B500801770 /* ViewControllerAssembly.swift */,
+				BCE1E73F26405443008774FA /* UserCaseAssembly.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -410,7 +427,7 @@
 		BCA13826262401D600801770 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				BCA13827262401E400801770 /* BaseCoordinator.swift */,
+				BCE1E6F826404932008774FA /* ReactiveCoordinator.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -453,6 +470,7 @@
 		BCB31DDF2620128F0087B5A5 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				BC4B5A22263EC602005929CE /* UseCases */,
 				BC70C28C2626D4CE0070AE5C /* Extensions */,
 				BCA13858262448ED00801770 /* Application */,
 				BCB31DF0262013E40087B5A5 /* Shared */,
@@ -592,6 +610,16 @@
 				BCFF2E8C26317F7200BD58DD /* Cells */,
 				BC7B11E6251608EA008D0E59 /* HomeViewController.swift */,
 				BCFF2ED22632779A00BD58DD /* HomeCollectionFlowLayout.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BCE1E6FD26404F28008774FA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BCE1E6FE26404F76008774FA /* BlockUseCase.swift */,
+				BCE1E7352640520D008774FA /* MovieUseCase.swift */,
+				BCE1E73A2640530B008774FA /* StarWarUserCase.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -933,20 +961,23 @@
 				BCA1381C262346A000801770 /* ViewModelAssembly.swift in Sources */,
 				BCA1375D2621FB3600801770 /* NetworkLogger.swift in Sources */,
 				BCFF2E682631691200BD58DD /* StarShip.swift in Sources */,
+				BCE1E74026405443008774FA /* UserCaseAssembly.swift in Sources */,
 				BCA138052622A10500801770 /* ServiceAssembly.swift in Sources */,
 				BCB31DF42620140B0087B5A5 /* DomainConvertible.swift in Sources */,
 				BCA137A5262200BD00801770 /* MovieService.swift in Sources */,
+				BCE1E6F926404932008774FA /* ReactiveCoordinator.swift in Sources */,
 				BCA138302624067500801770 /* AppCoordinator.swift in Sources */,
 				BCCC3CAB250B73060065D7DE /* AppDelegate.swift in Sources */,
 				BCFF2EC82631926500BD58DD /* NSObject+.swift in Sources */,
 				BCB31E1826203BEA0087B5A5 /* HomeViewModel.swift in Sources */,
 				BCA1374B2621FA3500801770 /* Network.swift in Sources */,
-				BCA13828262401E400801770 /* BaseCoordinator.swift in Sources */,
+				BCE1E73B2640530B008774FA /* StarWarUserCase.swift in Sources */,
 				BCA138512624453700801770 /* BaseViewController.swift in Sources */,
 				BC70C2652625ACF70070AE5C /* Sequence+DomainMapping.swift in Sources */,
 				BCA13848262422FA00801770 /* BaseViewModel.swift in Sources */,
 				BCA137902621FF9000801770 /* MovieAPIRouter.swift in Sources */,
 				BC70C2742625B44E0070AE5C /* ErrorTracker.swift in Sources */,
+				BCE1E7362640520D008774FA /* MovieUseCase.swift in Sources */,
 				BCA1368626206B3800801770 /* Movie.swift in Sources */,
 				BC7B122425160A3F008D0E59 /* View+.swift in Sources */,
 				BCA1385A2624490C00801770 /* ExtendApplication+Services.swift in Sources */,
@@ -978,6 +1009,7 @@
 				BCFF2EB42631888D00BD58DD /* UIImageView+.swift in Sources */,
 				BCFF2E4C2631643E00BD58DD /* StarWarAPIRouter.swift in Sources */,
 				BCFF2E7E26317B4900BD58DD /* MovieSectionViewModel.swift in Sources */,
+				BCE1E6FF26404F76008774FA /* BlockUseCase.swift in Sources */,
 				BC70C2882626CCF40070AE5C /* ErrorHandler.swift in Sources */,
 				BCA1386526244A3A00801770 /* ExtendApplication.swift in Sources */,
 				BCA137702621FCD700801770 /* RequestConvertible.swift in Sources */,

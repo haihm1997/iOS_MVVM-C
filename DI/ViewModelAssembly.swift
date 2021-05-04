@@ -14,8 +14,12 @@ struct ViewModelAssembly: Assembly {
     func assemble(container: Container) {
         
         container.register(HomeViewModel.self) { resolver in
-            return HomeViewModel(movieInjector: ExtendApplication.shared,
-                                 starWarInjector: ExtendApplication.shared)
+            let blockUserCase = resolver.resolve(BlockUseCaseType.self)!
+            let movieUserCase = resolver.resolve(MovieUserCaseType.self)!
+            let starWarUserCase = resolver.resolve(StarWarUserCaseType.self)!
+            return HomeViewModel(blockUserCase: blockUserCase,
+                                 movieUserCase: movieUserCase,
+                                 starWarUserCase: starWarUserCase)
         }
         
     }
