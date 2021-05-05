@@ -14,6 +14,35 @@ import Alamofire
 enum HomeSection {
     case movies(viewModel: MovieSectionViewModel)
     case starships(viewModel: StarWarSectionViewModel)
+    
+    init(from type: BlockType) {
+        switch type {
+        case .movies:
+            self = .movies(viewModel: .init(data: []))
+        case .starShip:
+            self = .starships(viewModel: .init(data: []))
+        }
+    }
+    
+    func merge(other: HomeSection) -> HomeSection {
+        switch self {
+        case .movies(let viewModel):
+            switch other {
+            case .movies(let newViewModel):
+                return .movies(viewModel: .init(data: viewModel.data + newViewModel.data))
+            default:
+                return self
+            }
+        case .starships(let viewModel):
+            switch other {
+            case .starships(let newViewModel):
+                return .starships(viewModel: .init(data: viewModel.data + newViewModel.data))
+            default:
+                return self
+            }
+        }
+    }
+    
 }
 
 class HomeViewModel: BaseViewModel {
@@ -32,21 +61,36 @@ class HomeViewModel: BaseViewModel {
         outActivity = activityTracker.status(for: LOADING_KEY)
         super.init()
         
-        blockUserCase.fetchBlocks().subscribe(onNext: { blocks in
-            let movieObservables = Observable<[Movie]>.combineLatest(blocks.movieBlocks.map { _ in movieUserCase.fetchPopularMovies() })
-            let starshipObservables = Observable<[StarShip]>.combineLatest(blocks.starShipBlocks.map { block in
-                starWarUserCase.fetchStarships(by: block.query ?? "")
-            })
-            Observable.combineLatest(movieObservables, starshipObservables)
-                .trackError(with: errorTracker)
-                .trackActivity(LOADING_KEY, with: activityTracker)
-                .map { movies, starships -> [HomeSection] in
-                    let movieViewModels = movies.compactMap { MovieSectionViewModel(data: $0) }.map { HomeSection.movies(viewModel: $0) }
-                    let starWarViewModels = starships.compactMap { StarWarSectionViewModel(data: $0) }.map { HomeSection.starships(viewModel: $0) }
-                    return movieViewModels + starWarViewModels
-                }.bind(to: self.outAllSections)
-                .disposed(by: self.rx.disposeBag)
-        }).disposed(by: rx.disposeBag)
+        let getBlockObs = blockUserCase.fetchBlocks().share()
+
+        getBlockObs
+            .map { $0.map(HomeSection.init) }
+            .bind(to: outAllSections).disposed(by: rx.disposeBag)
+        
+        getBlockObs
+            .flatMap { Observable.from($0.enumerated()) }
+            .flatMap { index, blockType -> Observable<(Int, HomeSection)> in
+                switch blockType {
+                case .movies:
+                    return movieUserCase.fetchPopularMovies()
+                        .map { HomeSection.movies(viewModel: .init(data: $0)) }
+                        .withLatestFrom(Observable.just(index)) { ($1, $0) }
+                case .starShip(let query):
+                    return starWarUserCase.fetchStarships(by: query)
+                        .map { HomeSection.starships(viewModel: .init(data: $0)) }
+                        .withLatestFrom(Observable.just(index)) { ($1, $0) }
+                }
+            }
+            .withLatestFrom(outAllSections) { ($0.0, $0.1, $1) }
+            .map { index, loadedSection, result -> [HomeSection] in
+                var newResult = result
+                newResult[index] = result[index].merge(other: loadedSection)
+                return newResult
+            }
+            .trackError(with: errorTracker)
+            .trackActivity(LOADING_KEY, with: activityTracker)
+            .bind(to: outAllSections)
+            .disposed(by: rx.disposeBag)
         
     }
     

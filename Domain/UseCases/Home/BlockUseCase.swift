@@ -37,7 +37,7 @@ class BlockUseCase: BlockUseCaseType {
     
     func fetchBlocks() -> Observable<[BlockType]> {
         // Do anything (ex: fetch user default data) before call api to get blocks
-        return Observable.just([.movies, .starShip(query: "a"), .movies, .starShip(query: "b"), .movies, .starShip(query: "c")])
+        return Observable.just([.movies, .starShip(query: "a"), .movies, .starShip(query: "b"), .movies, .starShip(query: "c"), .starShip(query: "d")])
     }
     
 }
