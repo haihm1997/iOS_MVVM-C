@@ -51,6 +51,7 @@ class HomeViewModel: BaseViewModel {
     var outError: Observable<ProjectError>
     var outActivity: Observable<Bool>
     var outDidTapMovie = PublishSubject<Movie>()
+    var outLastViewedId = BehaviorRelay<Int?>(value: nil)
         
     init(blockUserCase: BlockUseCaseType,
          movieUserCase: MovieUserCaseType,

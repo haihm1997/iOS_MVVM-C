@@ -12,7 +12,7 @@ extension UIImage {
     
     // Named raw string image's name in resource here
     enum Name: String {
-        case background = "background_test"
+        case back = "ic_back"
     }
     
     convenience init?(name: Name) {

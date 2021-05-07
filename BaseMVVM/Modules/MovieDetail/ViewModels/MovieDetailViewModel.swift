@@ -12,6 +12,8 @@ import RxRelay
 
 class MovieDetailViewModel: BaseViewModel {
     
+    let movieId: Int
+    
     // Output
     let outAttributes = BehaviorRelay<[MovieAttribute]>(value: [])
     var outError: Observable<ProjectError>
@@ -24,6 +26,7 @@ class MovieDetailViewModel: BaseViewModel {
         let activityTracker = ActivityTracker<String>()
         outError = errorTracker.asDomain()
         outActivity = activityTracker.status(for: LOADING_KEY)
+        self.movieId = id
         super.init()
         
         movieUserCase.fetchMovieDetail(id: id)

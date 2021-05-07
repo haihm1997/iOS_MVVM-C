@@ -40,6 +40,11 @@ enum HomeSectionIdentifier: String, CaseIterable {
 
 class HomeViewController: BaseViewController {
     
+    let navigationView = configure(MyNavigationView()) {
+        $0.title = "Home"
+        $0.leftButtonIcon = nil
+    }
+    
     private lazy var collectionView: UICollectionView = {
         let layout = HomeCollectionFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -55,10 +60,17 @@ class HomeViewController: BaseViewController {
     override func loadView() {
         super.loadView()
         view.backgroundColor = .white
-        view.addSubviews(collectionView)
+        view.addSubviews(collectionView, navigationView)
+        
+        navigationView.snp.makeConstraints { (maker) in
+            maker.top.equalTo(view.safeAreaLayoutGuide)
+            maker.leading.trailing.equalToSuperview()
+            maker.height.equalTo(56)
+        }
         
         self.collectionView.snp.makeConstraints { (maker) in
-            maker.top.leading.trailing.bottom.equalToSuperview()
+            maker.leading.trailing.bottom.equalToSuperview()
+            maker.top.equalTo(navigationView.snp.bottom)
         }
     }
     
@@ -73,6 +85,11 @@ class HomeViewController: BaseViewController {
             .disposed(by: rx.disposeBag)
         viewModel.outError.bind(to: ErrorHandler.defaultAlertBinder(from: self)).disposed(by: rx.disposeBag)
         viewModel.outActivity.bind(to: loadingBinder).disposed(by: rx.disposeBag)
+        viewModel.outLastViewedId
+            .compactMap { $0 }
+            .map { "\($0)" }
+            .bind(to: navigationView.rightButton.rx.title())
+            .disposed(by: rx.disposeBag)
     }
 
     private func createDataSource() -> DataSource {

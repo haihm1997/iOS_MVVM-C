@@ -23,7 +23,9 @@ class MovieDetailCoordinator: ReactiveCoordinator<Int?> {
     override func start() -> Observable<Int?> {
         let viewController = Assembler.resolve(MovieDetailViewController.self, argument: movieId)!
         navController?.pushViewController(viewController, animated: true)
-        return viewController.viewModel.didClose.take(1)
+        return viewController.viewModel.didClose.debug().do(onNext: { [weak self] _ in
+            self?.navController?.popViewController(animated: true)
+        }).asObservable()
     }
     
 }

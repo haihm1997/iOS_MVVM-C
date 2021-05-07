@@ -23,15 +23,17 @@ class HomeCoordinator: ReactiveCoordinator<Void> {
     public override func start() -> Observable<Void> {
         let homeVC = Assembler.resolve(HomeViewController.self)!
         let nav = UINavigationController(rootViewController: homeVC)
+        nav.setNavigationBarHidden(true, animated: false)
         self.nav = nav
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
         
         homeVC.viewModel.outDidTapMovie
-            .map({ [unowned self] movie in
-                self.coordinateToMovieDetail(with: movie.id)
-            })
-            .subscribe()
+            .compactMap { [weak self] movie in
+                self?.coordinateToMovieDetail(with: movie.id)
+            }
+            .flatMap { $0 }
+            .bind(to: homeVC.viewModel.outLastViewedId)
             .disposed(by: rx.disposeBag)
         
         return Observable.never()
@@ -41,9 +43,9 @@ class HomeCoordinator: ReactiveCoordinator<Void> {
 
 extension HomeCoordinator {
     
-    private func coordinateToMovieDetail(with movieId: Int) -> Observable<Int?> {
+    private func coordinateToMovieDetail(with movieId: Int) -> Observable<Int> {
         let movieDetailCoordinator = MovieDetailCoordinator(nav: nav, movieId: movieId)
-        return coordinate(to: movieDetailCoordinator)
+        return coordinate(to: movieDetailCoordinator).compactMap { $0 }
     }
     
 }

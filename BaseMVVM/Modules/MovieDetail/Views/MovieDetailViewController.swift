@@ -13,6 +13,10 @@ import SnapKit
 import RxSwift
 
 class MovieDetailViewController: BaseViewController {
+    
+    let navigationView = configure(MyNavigationView()) {
+        $0.title = "Movie Detail"
+    }
 
     private lazy var collectionView: UICollectionView = {
         let layout = MovieDetailFlowLayout()
@@ -29,10 +33,17 @@ class MovieDetailViewController: BaseViewController {
     override func loadView() {
         super.loadView()
         self.view.backgroundColor = .white
-        self.view.addSubview(collectionView)
-
-        collectionView.snp.makeConstraints { (maker) in
-            maker.top.leading.trailing.bottom.equalToSuperview()
+        self.view.addSubviews(collectionView, navigationView)
+        
+        navigationView.snp.makeConstraints { (maker) in
+            maker.top.equalTo(view.safeAreaLayoutGuide)
+            maker.leading.trailing.equalToSuperview()
+            maker.height.equalTo(56)
+        }
+        
+        self.collectionView.snp.makeConstraints { (maker) in
+            maker.leading.trailing.bottom.equalToSuperview()
+            maker.top.equalTo(navigationView.snp.bottom)
         }
     }
     
@@ -46,6 +57,7 @@ class MovieDetailViewController: BaseViewController {
             _, item, cell in
             cell.bind(attribute: item)
         }.disposed(by: rx.disposeBag)
+        navigationView.leftAction.withLatestFrom(Observable.just(viewModel.movieId)).bind(to: viewModel.didClose).disposed(by: rx.disposeBag)
     }
 
 }

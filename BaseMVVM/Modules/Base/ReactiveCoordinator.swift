@@ -29,6 +29,7 @@ class ReactiveCoordinator<ResultType>: NSObject {
         store(coordinator: coordinator)
         return coordinator.start()
             .do(onNext: { [weak self] _ in
+                    print("ReactiveCoordinator: released - \(coordinator.identifier)")
                 self?.release(coordinator: coordinator) })
     }
 

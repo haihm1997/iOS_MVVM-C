@@ -64,6 +64,8 @@
 		BCCC3CB7250B73070065D7DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCCC3CB5250B73070065D7DE /* LaunchScreen.storyboard */; };
 		BCCC3CC2250B73070065D7DE /* BaseMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCC3CC1250B73070065D7DE /* BaseMVVMTests.swift */; };
 		BCCC3CCD250B73070065D7DE /* BaseMVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCC3CCC250B73070065D7DE /* BaseMVVMUITests.swift */; };
+		BCCDDCB826453E4B002EE41B /* MyNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCDDCB726453E4B002EE41B /* MyNavigationView.swift */; };
+		BCCDDCC526453E98002EE41B /* BaseCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCDDCC426453E98002EE41B /* BaseCustomView.swift */; };
 		BCE1E6F926404932008774FA /* ReactiveCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1E6F826404932008774FA /* ReactiveCoordinator.swift */; };
 		BCE1E6FF26404F76008774FA /* BlockUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1E6FE26404F76008774FA /* BlockUseCase.swift */; };
 		BCE1E7362640520D008774FA /* MovieUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1E7352640520D008774FA /* MovieUseCase.swift */; };
@@ -176,6 +178,8 @@
 		BCCC3CC8250B73070065D7DE /* BaseMVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseMVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCCC3CCC250B73070065D7DE /* BaseMVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMVVMUITests.swift; sourceTree = "<group>"; };
 		BCCC3CCE250B73070065D7DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCCDDCB726453E4B002EE41B /* MyNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigationView.swift; sourceTree = "<group>"; };
+		BCCDDCC426453E98002EE41B /* BaseCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCustomView.swift; sourceTree = "<group>"; };
 		BCE1E6F826404932008774FA /* ReactiveCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveCoordinator.swift; sourceTree = "<group>"; };
 		BCE1E6FE26404F76008774FA /* BlockUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockUseCase.swift; sourceTree = "<group>"; };
 		BCE1E7352640520D008774FA /* MovieUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieUseCase.swift; sourceTree = "<group>"; };
@@ -477,6 +481,7 @@
 				BCA13847262422FA00801770 /* BaseViewModel.swift */,
 				BCA138502624453700801770 /* BaseViewController.swift */,
 				BCFF2E8726317F0300BD58DD /* BaseCollectionViewCell.swift */,
+				BCCDDCC426453E98002EE41B /* BaseCustomView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -614,6 +619,7 @@
 			children = (
 				BC32CBE926445166003851A8 /* MovieDetail */,
 				BCCC3CDD250B73FB0065D7DE /* Home */,
+				BCCDDCB626453E26002EE41B /* CommonView */,
 				BCFF2ECC2632726000BD58DD /* FlowLayouts */,
 				BCA1384F2624452B00801770 /* Base */,
 			);
@@ -628,6 +634,14 @@
 				BC32CBFE2644E506003851A8 /* ViewModels */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		BCCDDCB626453E26002EE41B /* CommonView */ = {
+			isa = PBXGroup;
+			children = (
+				BCCDDCB726453E4B002EE41B /* MyNavigationView.swift */,
+			);
+			path = CommonView;
 			sourceTree = "<group>";
 		};
 		BCE1E6FD26404F28008774FA /* Home */ = {
@@ -1014,6 +1028,7 @@
 				BCCC3CAB250B73060065D7DE /* AppDelegate.swift in Sources */,
 				BC32CBEB26445185003851A8 /* MovieDetailViewController.swift in Sources */,
 				BCFF2EC82631926500BD58DD /* NSObject+.swift in Sources */,
+				BCCDDCB826453E4B002EE41B /* MyNavigationView.swift in Sources */,
 				BCB31E1826203BEA0087B5A5 /* HomeViewModel.swift in Sources */,
 				BCA1374B2621FA3500801770 /* Network.swift in Sources */,
 				BCE1E73B2640530B008774FA /* StarWarUserCase.swift in Sources */,
@@ -1030,6 +1045,7 @@
 				BC7B122425160A3F008D0E59 /* View+.swift in Sources */,
 				BCA1385A2624490C00801770 /* ExtendApplication+Services.swift in Sources */,
 				BCFF2ED32632779A00BD58DD /* HomeCollectionFlowLayout.swift in Sources */,
+				BCCDDCC526453E98002EE41B /* BaseCustomView.swift in Sources */,
 				BCFF2E6D26316CFB00BD58DD /* StarWarInjectorType.swift in Sources */,
 				BC308BEB263A6A000063C7BC /* UIImage+.swift in Sources */,
 				BC32CBDA26444BE1003851A8 /* MovieDetail.swift in Sources */,
