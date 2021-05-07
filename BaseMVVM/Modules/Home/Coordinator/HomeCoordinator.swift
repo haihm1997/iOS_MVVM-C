@@ -9,6 +9,7 @@
 import Foundation
 import Swinject
 import RxSwift
+import RxCocoa
 
 class HomeCoordinator: ReactiveCoordinator<Void> {
     
@@ -25,7 +26,24 @@ class HomeCoordinator: ReactiveCoordinator<Void> {
         self.nav = nav
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
+        
+        homeVC.viewModel.outDidTapMovie
+            .map({ [unowned self] movie in
+                self.coordinateToMovieDetail(with: movie.id)
+            })
+            .subscribe()
+            .disposed(by: rx.disposeBag)
+        
         return Observable.never()
+    }
+    
+}
+
+extension HomeCoordinator {
+    
+    private func coordinateToMovieDetail(with movieId: Int) -> Observable<Int?> {
+        let movieDetailCoordinator = MovieDetailCoordinator(nav: nav, movieId: movieId)
+        return coordinate(to: movieDetailCoordinator)
     }
     
 }

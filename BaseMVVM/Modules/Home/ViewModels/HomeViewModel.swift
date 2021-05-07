@@ -9,7 +9,6 @@
 import Foundation
 import RxSwift
 import RxRelay
-import Alamofire
 
 enum HomeSection {
     case movies(viewModel: MovieSectionViewModel)
@@ -51,7 +50,8 @@ class HomeViewModel: BaseViewModel {
     let outAllSections = BehaviorRelay<[HomeSection]>(value: [])
     var outError: Observable<ProjectError>
     var outActivity: Observable<Bool>
-    
+    var outDidTapMovie = PublishSubject<Movie>()
+        
     init(blockUserCase: BlockUseCaseType,
          movieUserCase: MovieUserCaseType,
          starWarUserCase: StarWarUserCaseType) {

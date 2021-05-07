@@ -45,6 +45,8 @@ class MoviesSection: BaseCollectionViewCell {
             _, item, cell in
             cell.bind(movie: item)
         }.disposed(by: disposeBag)
+        
+        collectionView.rx.modelSelected(Movie.self).bind(to: viewModel.inDidTapCell).disposed(by: disposeBag)
     }
     
 }

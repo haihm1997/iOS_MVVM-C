@@ -11,6 +11,7 @@ import RxSwift
 
 protocol MovieUserCaseType {
     func fetchPopularMovies() -> Observable<[Movie]>
+    func fetchMovieDetail(id: Int) -> Observable<MovieDetail>
 }
 
 class MovieUserCase: MovieUserCaseType {
@@ -24,6 +25,10 @@ class MovieUserCase: MovieUserCaseType {
     func fetchPopularMovies() -> Observable<[Movie]> {
         // Do any thing before call api
         return movieInjector.getMovieService().fetchPopularMovies().asObservable()
+    }
+    
+    func fetchMovieDetail(id: Int) -> Observable<MovieDetail> {
+        return movieInjector.getMovieService().fetchMovieDetail(id: id).asObservable()
     }
     
 }

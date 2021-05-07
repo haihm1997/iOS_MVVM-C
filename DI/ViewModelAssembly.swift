@@ -22,6 +22,11 @@ struct ViewModelAssembly: Assembly {
                                  starWarUserCase: starWarUserCase)
         }
         
+        container.register(MovieDetailViewModel.self) { (resolver: Resolver, id: Int) in
+            let movieUserCase = resolver.resolve(MovieUserCaseType.self)!
+            return MovieDetailViewModel(movieUserCase: movieUserCase, id: id)
+        }
+        
     }
     
 }

@@ -8,13 +8,18 @@
 
 import Foundation
 import RxSwift
+import RxRelay
 
 class MovieSectionViewModel: BaseViewModel {
     
-    let data: [Movie]
+    var data: [Movie]
+    
+    // Input
+    var inDidTapCell = PublishRelay<Movie>()
     
     init(data: [Movie]) {
         self.data = data
+        super.init()
     }
     
 }

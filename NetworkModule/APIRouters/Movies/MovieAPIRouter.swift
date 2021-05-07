@@ -11,10 +11,11 @@ import Alamofire
 
 enum MovieAPIRouter: EndPointConvertible {
     case movies
+    case detail(id: Int)
 
     var method: HTTPMethod {
         switch self {
-        case .movies:
+        case .movies, .detail:
             return .get
         }
     }
@@ -23,15 +24,15 @@ enum MovieAPIRouter: EndPointConvertible {
         switch self {
         case .movies:
             return "/popular"
+        case .detail(let id):
+            return "/\(id)/videos"
         }
     }
     
     var encoder: HTTPEncoder {
         switch self {
-        case .movies:
-            // Just for test
+        case .movies, .detail:
             return .urlEncoder(parameters: ["api_key": "802b2c4b88ea1183e50e6b285a27696e"])
-            //return .urlEncoder(parameters: ["api_key": "802b2c4b88ea1183e50e6b285a276"])
         }
     }
     

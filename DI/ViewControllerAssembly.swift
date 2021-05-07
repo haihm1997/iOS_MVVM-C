@@ -19,6 +19,12 @@ struct ViewControllerAssembly: Assembly {
             return homeVC
         }
         
+        container.register(MovieDetailViewController.self) { (resolver: Resolver, movieId: Int) in
+            let movieDetailVC = MovieDetailViewController()
+            movieDetailVC.viewModel = resolver.resolve(MovieDetailViewModel.self, argument: movieId)!
+            return movieDetailVC
+        }
+        
     }
     
 }

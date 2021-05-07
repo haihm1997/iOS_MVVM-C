@@ -11,6 +11,7 @@ import RxSwift
 
 public protocol MovieServiceType {
     func fetchPopularMovies() -> Single<[Movie]>
+    func fetchMovieDetail(id: Int) -> Single<MovieDetail>
 }
 
 public class MovieService {
@@ -31,6 +32,13 @@ extension MovieService: MovieServiceType {
             .responseDecodable(of: MovieResult.self)
             .map { $0.results }
             .mapToDomain()
+    }
+    
+    public func fetchMovieDetail(id: Int) -> Single<MovieDetail> {
+        return network.rx.request(MovieAPIRouter.detail(id: id))
+            .validate()
+            .responseDecodable(of: MovieDetailModel.self)
+            .map { $0.asDomain() }
     }
     
 }

@@ -10,7 +10,9 @@ import Foundation
 import RxSwift
 
 extension PrimitiveSequenceType where Trait == SingleTrait, Element: DomainConvertible {
+    
     func mapToDomain() -> Single<Element.DomainType> {
         return map { $0.asDomain() }
     }
+    
 }

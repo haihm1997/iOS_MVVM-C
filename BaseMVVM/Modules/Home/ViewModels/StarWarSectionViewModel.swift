@@ -11,7 +11,7 @@ import RxSwift
 
 class StarWarSectionViewModel: BaseViewModel {
     
-    let data: [StarShip]
+    var data: [StarShip]
     
     init(data: [StarShip]) {
         self.data = data

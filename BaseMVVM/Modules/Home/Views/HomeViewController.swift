@@ -76,13 +76,16 @@ class HomeViewController: BaseViewController {
     }
 
     private func createDataSource() -> DataSource {
-        let dataSource = DataSource (configureCell: { (_, collectionView, indexPath, section) -> UICollectionViewCell in
+        let dataSource = DataSource (configureCell: { [weak self] (_, collectionView, indexPath, section) -> UICollectionViewCell in
+            guard let self = self else { return UICollectionViewCell() }
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeSectionIdentifier.identifider(for: section).rawValue, for: indexPath)
             switch section {
-            case .movies(let viewModel):
-                (cell as! MoviesSection).bind(viewModel)
-            case .starships(let viewModel):
-                (cell as! StarShipSection).bind(viewModel)
+            case .movies(let cellViewModel):
+                let cell = cell as! MoviesSection
+                cell.bind(cellViewModel)
+                cellViewModel.inDidTapCell.bind(to: self.viewModel.outDidTapMovie).disposed(by: cell.disposeBag)
+            case .starships(let cellViewModel):
+                (cell as! StarShipSection).bind(cellViewModel)
             }
             return cell
         })
