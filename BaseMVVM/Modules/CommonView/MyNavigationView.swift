@@ -33,6 +33,14 @@ class MyNavigationView: BaseCustomView {
         $0.titleLabel?.font = UIFont.systemFont(ofSize: 14)
     }
     
+    let headerView = configure(UIView()) {
+        $0.backgroundColor = .white
+    }
+    
+    let navigationContainer = configure(UIView()) {
+        $0.backgroundColor = .white
+    }
+    
     var title: String? {
         didSet {
             titleLabel.text = title
@@ -54,9 +62,8 @@ class MyNavigationView: BaseCustomView {
     }
     
     override func setupViews() {
-        self.backgroundColor = .white
-        self.addSubviews(titleLabel, leftButtonImage, leftButton, rightButton)
-        
+        self.backgroundColor = .clear
+        headerView.addSubviews(titleLabel, leftButtonImage, leftButton, rightButton)
         leftButton.snp.makeConstraints { (maker) in
             maker.height.equalTo(36)
             maker.width.equalTo(100)
@@ -78,6 +85,27 @@ class MyNavigationView: BaseCustomView {
         titleLabel.snp.makeConstraints { (maker) in
             maker.centerX.centerY.equalToSuperview()
         }
+        
+        navigationContainer.addSubview(headerView)
+        headerView.snp.makeConstraints { (maker) in
+            maker.bottom.leading.trailing.equalToSuperview()
+            maker.height.equalTo(Constant.NavigationSize.header)
+        }
+        
+        addSubview(navigationContainer)
+        navigationContainer.snp.makeConstraints { (maker) in
+            maker.top.leading.trailing.equalToSuperview()
+            maker.bottom.equalTo(self.snp.bottom).inset(Constant.NavigationSize.shadowPathHeight)
+        }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        navigationContainer.layer.shadowColor = UIColor.black.cgColor
+        navigationContainer.layer.shadowPath = UIBezierPath(rect: navigationContainer.frame).cgPath
+        navigationContainer.layer.shadowRadius = 5
+        navigationContainer.layer.shadowOffset = CGSize(width: 0, height: Constant.NavigationSize.shadowPathHeight)
+        navigationContainer.layer.shadowOpacity = 0.08
     }
     
 }

@@ -36,9 +36,8 @@ class MovieDetailViewController: BaseViewController {
         self.view.addSubviews(collectionView, navigationView)
         
         navigationView.snp.makeConstraints { (maker) in
-            maker.top.equalTo(view.safeAreaLayoutGuide)
-            maker.leading.trailing.equalToSuperview()
-            maker.height.equalTo(56)
+            maker.top.leading.trailing.equalToSuperview()
+            maker.height.equalTo(Constant.NavigationSize.totalHeight)
         }
         
         self.collectionView.snp.makeConstraints { (maker) in

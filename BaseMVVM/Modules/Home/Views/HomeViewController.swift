@@ -63,14 +63,13 @@ class HomeViewController: BaseViewController {
         view.addSubviews(collectionView, navigationView)
         
         navigationView.snp.makeConstraints { (maker) in
-            maker.top.equalTo(view.safeAreaLayoutGuide)
-            maker.leading.trailing.equalToSuperview()
-            maker.height.equalTo(56)
+            maker.top.leading.trailing.equalToSuperview()
+            maker.height.equalTo(Constant.NavigationSize.totalHeight)
         }
         
         self.collectionView.snp.makeConstraints { (maker) in
             maker.leading.trailing.bottom.equalToSuperview()
-            maker.top.equalTo(navigationView.snp.bottom)
+            maker.top.equalTo(navigationView.snp.bottom).offset(Constant.NavigationSize.shadowPathHeight)
         }
     }
     

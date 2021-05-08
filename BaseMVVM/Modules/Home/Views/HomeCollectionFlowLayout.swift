@@ -27,7 +27,7 @@ class HomeCollectionFlowLayout: UICollectionViewFlowLayout {
         minimumInteritemSpacing = 0
         minimumLineSpacing = 16
         scrollDirection = .vertical
-        sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 16, right: 0)
+        sectionInset = UIEdgeInsets(top: 8, left: 0, bottom: 16, right: 0)
     }
     
     override var itemSize: CGSize {
