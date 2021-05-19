@@ -61,7 +61,7 @@ class MyNavigationView: BaseCustomView {
         return leftButton.rx.tap.asObservable()
     }
     
-    override func setupViews() {
+    override func commonInit() {
         self.backgroundColor = .clear
         headerView.addSubviews(titleLabel, leftButtonImage, leftButton, rightButton)
         leftButton.snp.makeConstraints { (maker) in

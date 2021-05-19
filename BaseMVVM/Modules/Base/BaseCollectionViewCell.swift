@@ -6,7 +6,6 @@
 //  Copyright © 2021 TonyHoang. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class BaseCollectionViewCell: UICollectionViewCell {

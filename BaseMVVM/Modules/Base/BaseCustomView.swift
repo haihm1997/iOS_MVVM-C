@@ -13,15 +13,15 @@ class BaseCustomView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupViews()
+        commonInit()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setupViews()
+        commonInit()
     }
     
-    func setupViews() {
+    func commonInit() {
         
     }
     

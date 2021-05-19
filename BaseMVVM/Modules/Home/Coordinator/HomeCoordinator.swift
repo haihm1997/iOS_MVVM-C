@@ -13,20 +13,13 @@ import RxCocoa
 
 class HomeCoordinator: ReactiveCoordinator<Void> {
     
-    let window: UIWindow?
-    var nav: UINavigationController?
-    
-    public init(window: UIWindow?) {
-        self.window = window
-    }
-    
+    var nav: UINavigationController!
+        
     public override func start() -> Observable<Void> {
         let homeVC = Assembler.resolve(HomeViewController.self)!
         let nav = UINavigationController(rootViewController: homeVC)
         nav.setNavigationBarHidden(true, animated: false)
         self.nav = nav
-        window?.rootViewController = nav
-        window?.makeKeyAndVisible()
         
         homeVC.viewModel.outDidTapMovie
             .compactMap { [weak self] movie in

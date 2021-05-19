@@ -19,8 +19,8 @@ class AppCoordinator: ReactiveCoordinator<Void> {
     }
     
     override func start() -> Observable<Void> {
-        let homeCoordinator = HomeCoordinator(window: window)
-        return coordinate(to: homeCoordinator)
+        let tabBarCoordinator = TabBarCoordinator(window: window)
+        return coordinate(to: tabBarCoordinator)
     }
     
 }

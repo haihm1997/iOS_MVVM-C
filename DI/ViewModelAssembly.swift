@@ -27,6 +27,10 @@ struct ViewModelAssembly: Assembly {
             return MovieDetailViewModel(movieUserCase: movieUserCase, id: id)
         }
         
+        container.register(TabBarViewModel.self) { resolver in
+            return TabBarViewModel()
+        }
+        
     }
     
 }

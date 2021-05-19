@@ -46,12 +46,15 @@ enum HomeSection {
 
 class HomeViewModel: BaseViewModel {
     
+    // Input
+    let inTapSomething = PublishRelay<Int>()
+    
     // Output
     let outAllSections = BehaviorRelay<[HomeSection]>(value: [])
-    var outError: Observable<ProjectError>
-    var outActivity: Observable<Bool>
-    var outDidTapMovie = PublishSubject<Movie>()
-    var outLastViewedId = BehaviorRelay<Int?>(value: nil)
+    let outError: Observable<ProjectError>
+    let outActivity: Observable<Bool>
+    let outDidTapMovie = PublishSubject<Movie>()
+    let outLastViewedId = BehaviorRelay<Int?>(value: nil)
         
     init(blockUserCase: BlockUseCaseType,
          movieUserCase: MovieUserCaseType,

@@ -10,6 +10,17 @@
 		247ACE4E53010912665FCEAC /* Pods_BaseMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84005D906925C5BFE8FA7FB8 /* Pods_BaseMVVM.framework */; };
 		6AF3BFA1C890ABF6A5042319 /* Pods_BaseMVVMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16E7780F07A0C5C317D21554 /* Pods_BaseMVVMTests.framework */; };
 		6D9EF864FDCC2A24A253E02F /* Pods_BaseMVVM_BaseMVVMUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C42C27BBE3B4DFF8A0001A /* Pods_BaseMVVM_BaseMVVMUITests.framework */; };
+		BC29A5AE264B875000618BA5 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC29A5AD264B875000618BA5 /* BadgeView.swift */; };
+		BC29A5B3264B877D00618BA5 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC29A5B2264B877D00618BA5 /* String+.swift */; };
+		BC29A5C2264B87BE00618BA5 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC29A5B9264B87BE00618BA5 /* TabBarViewModel.swift */; };
+		BC29A5C3264B87BE00618BA5 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC29A5BB264B87BE00618BA5 /* TabBarCoordinator.swift */; };
+		BC29A5C4264B87BE00618BA5 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC29A5BD264B87BE00618BA5 /* TabBarViewController.swift */; };
+		BC29A5C5264B87BE00618BA5 /* TabBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC29A5BF264B87BE00618BA5 /* TabBarItemView.swift */; };
+		BC29A5C6264B87BE00618BA5 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC29A5C0264B87BE00618BA5 /* TabBarView.swift */; };
+		BC29A5C7264B87BE00618BA5 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC29A5C1264B87BE00618BA5 /* CustomTabBar.swift */; };
+		BC29A5CF264B8A6500618BA5 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC29A5CE264B8A6500618BA5 /* UIColor+.swift */; };
+		BC29A5D5264B8F5F00618BA5 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC29A5D4264B8F5F00618BA5 /* TestViewController.swift */; };
+		BC29A5E8264B92E500618BA5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BC29A5EA264B92E500618BA5 /* Localizable.strings */; };
 		BC308BEB263A6A000063C7BC /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC308BEA263A6A000063C7BC /* UIImage+.swift */; };
 		BC32CBD5264448E0003851A8 /* MovieDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC32CBD4264448E0003851A8 /* MovieDetailModel.swift */; };
 		BC32CBDA26444BE1003851A8 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC32CBD926444BE1003851A8 /* MovieDetail.swift */; };
@@ -118,6 +129,18 @@
 		887B81408C6839453C6B2578 /* Pods-BaseMVVMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseMVVMTests.release.xcconfig"; path = "Target Support Files/Pods-BaseMVVMTests/Pods-BaseMVVMTests.release.xcconfig"; sourceTree = "<group>"; };
 		88C42C27BBE3B4DFF8A0001A /* Pods_BaseMVVM_BaseMVVMUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseMVVM_BaseMVVMUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A62267B549BC31C911461099 /* Pods-BaseMVVM-BaseMVVMUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseMVVM-BaseMVVMUITests.debug.xcconfig"; path = "Target Support Files/Pods-BaseMVVM-BaseMVVMUITests/Pods-BaseMVVM-BaseMVVMUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BC29A5AD264B875000618BA5 /* BadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
+		BC29A5B2264B877D00618BA5 /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		BC29A5B9264B87BE00618BA5 /* TabBarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
+		BC29A5BB264B87BE00618BA5 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		BC29A5BD264B87BE00618BA5 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		BC29A5BF264B87BE00618BA5 /* TabBarItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItemView.swift; sourceTree = "<group>"; };
+		BC29A5C0264B87BE00618BA5 /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		BC29A5C1264B87BE00618BA5 /* CustomTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		BC29A5CE264B8A6500618BA5 /* UIColor+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		BC29A5D4264B8F5F00618BA5 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		BC29A5E9264B92E500618BA5 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BC29A5EB264B92F100618BA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BC308BEA263A6A000063C7BC /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		BC32CBD4264448E0003851A8 /* MovieDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailModel.swift; sourceTree = "<group>"; };
 		BC32CBD926444BE1003851A8 /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
@@ -237,6 +260,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC29A5B7264B87BE00618BA5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BC29A5B8264B87BE00618BA5 /* ViewModel */,
+				BC29A5BA264B87BE00618BA5 /* Coordinator */,
+				BC29A5BC264B87BE00618BA5 /* Views */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BC29A5B8264B87BE00618BA5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BC29A5B9264B87BE00618BA5 /* TabBarViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BC29A5BA264B87BE00618BA5 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				BC29A5BB264B87BE00618BA5 /* TabBarCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		BC29A5BC264B87BE00618BA5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BC29A5BD264B87BE00618BA5 /* TabBarViewController.swift */,
+				BC29A5BE264B87BE00618BA5 /* Items */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BC29A5BE264B87BE00618BA5 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				BC29A5BF264B87BE00618BA5 /* TabBarItemView.swift */,
+				BC29A5C0264B87BE00618BA5 /* TabBarView.swift */,
+				BC29A5C1264B87BE00618BA5 /* CustomTabBar.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		BC29A5D3264B8F4B00618BA5 /* TestVC */ = {
+			isa = PBXGroup;
+			children = (
+				BC29A5D4264B8F5F00618BA5 /* TestViewController.swift */,
+			);
+			path = TestVC;
+			sourceTree = "<group>";
+		};
+		BC29A5DF264B92A400618BA5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BC29A5EA264B92E500618BA5 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		BC32CBE926445166003851A8 /* MovieDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,6 +419,8 @@
 		BC7B122225160A26008D0E59 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				BC29A5CE264B8A6500618BA5 /* UIColor+.swift */,
+				BC29A5B2264B877D00618BA5 /* String+.swift */,
 				BC7B122325160A3F008D0E59 /* View+.swift */,
 				BC7B122B25160AE5008D0E59 /* ViewController+.swift */,
 				BCFF2E9F2631814100BD58DD /* UIStackView+.swift */,
@@ -580,6 +666,7 @@
 				BC70C2852626CCDC0070AE5C /* Shared */,
 				BC7B122125160A0D008D0E59 /* Helper */,
 				BCCC3CDB250B73DC0065D7DE /* Application */,
+				BC29A5DF264B92A400618BA5 /* Resources */,
 				BCCC3CB3250B73070065D7DE /* Assets.xcassets */,
 				BCCC3CB5250B73070065D7DE /* LaunchScreen.storyboard */,
 				BCCC3CB8250B73070065D7DE /* Info.plist */,
@@ -617,8 +704,10 @@
 		BCCC3CDC250B73F20065D7DE /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BC29A5D3264B8F4B00618BA5 /* TestVC */,
 				BC32CBE926445166003851A8 /* MovieDetail */,
 				BCCC3CDD250B73FB0065D7DE /* Home */,
+				BC29A5B7264B87BE00618BA5 /* Main */,
 				BCCDDCB626453E26002EE41B /* CommonView */,
 				BCFF2ECC2632726000BD58DD /* FlowLayouts */,
 				BCA1384F2624452B00801770 /* Base */,
@@ -639,6 +728,7 @@
 		BCCDDCB626453E26002EE41B /* CommonView */ = {
 			isa = PBXGroup;
 			children = (
+				BC29A5AD264B875000618BA5 /* BadgeView.swift */,
 				BCCDDCB726453E4B002EE41B /* MyNavigationView.swift */,
 			);
 			path = CommonView;
@@ -882,6 +972,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCCC3CB7250B73070065D7DE /* LaunchScreen.storyboard in Resources */,
+				BC29A5E8264B92E500618BA5 /* Localizable.strings in Resources */,
 				BCCC3CB4250B73070065D7DE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1015,10 +1106,12 @@
 				BCA138122622AB0B00801770 /* AssemblerConfigs.swift in Sources */,
 				BCA137882621FF0700801770 /* MovieModel.swift in Sources */,
 				BCA13821262349B500801770 /* ViewControllerAssembly.swift in Sources */,
+				BC29A5D5264B8F5F00618BA5 /* TestViewController.swift in Sources */,
 				BCA1381C262346A000801770 /* ViewModelAssembly.swift in Sources */,
 				BCA1375D2621FB3600801770 /* NetworkLogger.swift in Sources */,
 				BCFF2E682631691200BD58DD /* StarShip.swift in Sources */,
 				BCE1E74026405443008774FA /* UserCaseAssembly.swift in Sources */,
+				BC29A5C5264B87BE00618BA5 /* TabBarItemView.swift in Sources */,
 				BCA138052622A10500801770 /* ServiceAssembly.swift in Sources */,
 				BCB31DF42620140B0087B5A5 /* DomainConvertible.swift in Sources */,
 				BCA137A5262200BD00801770 /* MovieService.swift in Sources */,
@@ -1034,6 +1127,7 @@
 				BCE1E73B2640530B008774FA /* StarWarUserCase.swift in Sources */,
 				BCA138512624453700801770 /* BaseViewController.swift in Sources */,
 				BC70C2652625ACF70070AE5C /* Sequence+DomainMapping.swift in Sources */,
+				BC29A5AE264B875000618BA5 /* BadgeView.swift in Sources */,
 				BCA13848262422FA00801770 /* BaseViewModel.swift in Sources */,
 				BCA137902621FF9000801770 /* MovieAPIRouter.swift in Sources */,
 				BC32CBF9264454DB003851A8 /* MovieAttributeCell.swift in Sources */,
@@ -1043,11 +1137,14 @@
 				BC32CBE526444DF9003851A8 /* MovieDetailViewModel.swift in Sources */,
 				BCA1368626206B3800801770 /* Movie.swift in Sources */,
 				BC7B122425160A3F008D0E59 /* View+.swift in Sources */,
+				BC29A5B3264B877D00618BA5 /* String+.swift in Sources */,
 				BCA1385A2624490C00801770 /* ExtendApplication+Services.swift in Sources */,
+				BC29A5CF264B8A6500618BA5 /* UIColor+.swift in Sources */,
 				BCFF2ED32632779A00BD58DD /* HomeCollectionFlowLayout.swift in Sources */,
 				BCCDDCC526453E98002EE41B /* BaseCustomView.swift in Sources */,
 				BCFF2E6D26316CFB00BD58DD /* StarWarInjectorType.swift in Sources */,
 				BC308BEB263A6A000063C7BC /* UIImage+.swift in Sources */,
+				BC29A5C2264B87BE00618BA5 /* TabBarViewModel.swift in Sources */,
 				BC32CBDA26444BE1003851A8 /* MovieDetail.swift in Sources */,
 				BCA137FD2622A09200801770 /* Assembler+.swift in Sources */,
 				BCA1383526241E8500801770 /* HomeCoordinator.swift in Sources */,
@@ -1064,12 +1161,15 @@
 				BCFF2E52263164F200BD58DD /* StarWarService.swift in Sources */,
 				BC7B122C25160AE5008D0E59 /* ViewController+.swift in Sources */,
 				BCA137582621FACA00801770 /* NetworkError.swift in Sources */,
+				BC29A5C6264B87BE00618BA5 /* TabBarView.swift in Sources */,
 				BCFF2ECE263272B600BD58DD /* CommonHorizontalFlowLayout.swift in Sources */,
 				BCFF2E8826317F0300BD58DD /* BaseCollectionViewCell.swift in Sources */,
+				BC29A5C3264B87BE00618BA5 /* TabBarCoordinator.swift in Sources */,
 				BCFF2E632631658300BD58DD /* StarShipModel.swift in Sources */,
 				BCFF2EF32632AD7200BD58DD /* LeakFinder.swift in Sources */,
 				BCFF2E8326317C2E00BD58DD /* StarWarSectionViewModel.swift in Sources */,
 				BCA137AA262201CF00801770 /* Configs.swift in Sources */,
+				BC29A5C7264B87BE00618BA5 /* CustomTabBar.swift in Sources */,
 				BCA1377E2621FE3E00801770 /* Single+Decodable.swift in Sources */,
 				BCFF2ED9263277D600BD58DD /* Constant.swift in Sources */,
 				BCFF2EB42631888D00BD58DD /* UIImageView+.swift in Sources */,
@@ -1078,6 +1178,7 @@
 				BCE1E6FF26404F76008774FA /* BlockUseCase.swift in Sources */,
 				BC70C2882626CCF40070AE5C /* ErrorHandler.swift in Sources */,
 				BCA1386526244A3A00801770 /* ExtendApplication.swift in Sources */,
+				BC29A5C4264B87BE00618BA5 /* TabBarViewController.swift in Sources */,
 				BCA137702621FCD700801770 /* RequestConvertible.swift in Sources */,
 				BCFF2E9B26317FBB00BD58DD /* MoviesSection.swift in Sources */,
 				BCA1376B2621FCA200801770 /* HTTPEncoder.swift in Sources */,
@@ -1122,6 +1223,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		BC29A5EA264B92E500618BA5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC29A5E9264B92E500618BA5 /* vi */,
+				BC29A5EB264B92F100618BA5 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		BCCC3CB5250B73070065D7DE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

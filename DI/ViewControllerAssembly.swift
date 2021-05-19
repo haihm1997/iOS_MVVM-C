@@ -25,6 +25,12 @@ struct ViewControllerAssembly: Assembly {
             return movieDetailVC
         }
         
+        container.register(TabBarController.self) { resolver in
+            let tabBarController = TabBarController()
+            tabBarController.viewModel = resolver.resolve(TabBarViewModel.self)!
+            return tabBarController
+        }
+        
     }
     
 }

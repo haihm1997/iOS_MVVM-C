@@ -41,29 +41,3 @@ class BlockUseCase: BlockUseCaseType {
     }
     
 }
-
-extension Array where Element == BlockType  {
-    
-    var movieBlocks: [BlockType] {
-        return  self.filter { (block) -> Bool in
-            switch block {
-            case .movies:
-                return true
-            default:
-                return false
-            }
-        }
-    }
-    
-    var starShipBlocks: [BlockType] {
-        return  self.filter { (block) -> Bool in
-            switch block {
-            case .starShip:
-                return true
-            default:
-                return false
-            }
-        }
-    }
-    
-}

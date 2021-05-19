@@ -14,6 +14,7 @@ enum Constant {
         static let screenWidth: CGFloat = UIScreen.main.bounds.width
         static let screenHeight: CGFloat = UIScreen.main.bounds.height
         static let navigationHeight: CGFloat = SafeArea.topPadding + 56
+        static let tabBarHeight: CGFloat = 64
     }
     
     enum NavigationSize {

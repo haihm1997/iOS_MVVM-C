@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  BaseMVVM
+
+  Created by Hoang Hai on 12/05/2021.
+  Copyright © 2021 TonyHoang. All rights reserved.
+*/
+
+"home" = "Trang chủ";
+"order" = "Đơn hàng";
+"notification" = "Thông báo";
+"account" = "Tài khoản";
+ 
