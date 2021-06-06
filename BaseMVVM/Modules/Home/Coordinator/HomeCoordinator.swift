@@ -11,34 +11,38 @@ import Swinject
 import RxSwift
 import RxCocoa
 
-class HomeCoordinator: ReactiveCoordinator<Void> {
+class HomeCoordinator: BaseCoordinator {
     
     var nav: UINavigationController!
-        
-    public override func start() -> Observable<Void> {
+    
+    override func start() {
         let homeVC = Assembler.resolve(HomeViewController.self)!
         let nav = UINavigationController(rootViewController: homeVC)
         nav.setNavigationBarHidden(true, animated: false)
         self.nav = nav
         
         homeVC.viewModel.outDidTapMovie
-            .compactMap { [weak self] movie in
-                self?.coordinateToMovieDetail(with: movie.id)
-            }
-            .flatMap { $0 }
-            .bind(to: homeVC.viewModel.outLastViewedId)
+            .map { $0.id }
+            .bind(to: openMovieDetailBinder)
             .disposed(by: rx.disposeBag)
         
-        return Observable.never()
+        removeChildHandler = { [weak self] child, data in
+            if let child = child as? MovieDetailCoordinator,
+               let id = data?[child.resultKey] as? Int {
+                homeVC.viewModel.outLastViewedId.accept(id)
+            }
+        }
     }
     
 }
 
 extension HomeCoordinator {
     
-    private func coordinateToMovieDetail(with movieId: Int) -> Observable<Int> {
-        let movieDetailCoordinator = MovieDetailCoordinator(nav: nav, movieId: movieId)
-        return coordinate(to: movieDetailCoordinator).compactMap { $0 }
+    private var openMovieDetailBinder: Binder<Int> {
+        return Binder(self) { target, id in
+            let movieDetailCoordinator = MovieDetailCoordinator(nav: target.nav, movieId: id, parent: target)
+            target.coordinate(with: movieDetailCoordinator)
+        }
     }
     
 }

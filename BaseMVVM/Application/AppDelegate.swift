@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let window = UIWindow(frame: UIScreen.main.bounds)
         let appCoordinator = AppCoordinator(window: window)
-        appCoordinator.start().subscribe().disposed(by: rx.disposeBag)
+        appCoordinator.start()
         self.window = window
         
         return true

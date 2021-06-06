@@ -10,20 +10,16 @@ import Foundation
 import Swinject
 import RxSwift
 
-class TabBarCoordinator: ReactiveCoordinator<Void> {
+class TabBarCoordinator: BaseCoordinator {
     
-    let window: UIWindow?
+    var tabBarVC: UIViewController!
     
-    public init(window: UIWindow?) {
-        self.window = window
-    }
-    
-    override func start() -> Observable<Void> {
+    override func start() {
         var controllers: [UIViewController] = []
         let tabBarController = Assembler.resolve(TabBarController.self)!
         
-        let homeVC = HomeCoordinator()
-        coordinate(to: homeVC).subscribe().disposed(by: rx.disposeBag)
+        let homeVC = HomeCoordinator(parent: self)
+        coordinate(with: homeVC)
         controllers.append(homeVC.nav)
         
         let testVC = TestViewController()
@@ -39,11 +35,7 @@ class TabBarCoordinator: ReactiveCoordinator<Void> {
         controllers.append(otherVC)
         
         tabBarController.viewControllers = controllers
-        
-        window?.rootViewController = tabBarController
-        window?.makeKeyAndVisible()
-        
-        return Observable.never()
+        tabBarVC = tabBarController
     }
     
 }

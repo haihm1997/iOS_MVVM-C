@@ -29,6 +29,7 @@
 		BC32CBEB26445185003851A8 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC32CBEA26445185003851A8 /* MovieDetailViewController.swift */; };
 		BC32CBF4264451EB003851A8 /* MovieDetailFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC32CBF3264451EB003851A8 /* MovieDetailFlowLayout.swift */; };
 		BC32CBF9264454DB003851A8 /* MovieAttributeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC32CBF8264454DB003851A8 /* MovieAttributeCell.swift */; };
+		BC687DB6266D228200DCAE1C /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC687DB5266D228100DCAE1C /* BaseCoordinator.swift */; };
 		BC70C2542625AB320070AE5C /* ProjectError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC70C2532625AB320070AE5C /* ProjectError.swift */; };
 		BC70C2652625ACF70070AE5C /* Sequence+DomainMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC70C2642625ACF70070AE5C /* Sequence+DomainMapping.swift */; };
 		BC70C26A2625AD4F0070AE5C /* Single+DomainMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC70C2692625AD4F0070AE5C /* Single+DomainMapping.swift */; };
@@ -77,7 +78,6 @@
 		BCCC3CCD250B73070065D7DE /* BaseMVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCC3CCC250B73070065D7DE /* BaseMVVMUITests.swift */; };
 		BCCDDCB826453E4B002EE41B /* MyNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCDDCB726453E4B002EE41B /* MyNavigationView.swift */; };
 		BCCDDCC526453E98002EE41B /* BaseCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCDDCC426453E98002EE41B /* BaseCustomView.swift */; };
-		BCE1E6F926404932008774FA /* ReactiveCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1E6F826404932008774FA /* ReactiveCoordinator.swift */; };
 		BCE1E6FF26404F76008774FA /* BlockUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1E6FE26404F76008774FA /* BlockUseCase.swift */; };
 		BCE1E7362640520D008774FA /* MovieUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1E7352640520D008774FA /* MovieUseCase.swift */; };
 		BCE1E73B2640530B008774FA /* StarWarUserCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1E73A2640530B008774FA /* StarWarUserCase.swift */; };
@@ -149,6 +149,7 @@
 		BC32CBEA26445185003851A8 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		BC32CBF3264451EB003851A8 /* MovieDetailFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailFlowLayout.swift; sourceTree = "<group>"; };
 		BC32CBF8264454DB003851A8 /* MovieAttributeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAttributeCell.swift; sourceTree = "<group>"; };
+		BC687DB5266D228100DCAE1C /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		BC70C2532625AB320070AE5C /* ProjectError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectError.swift; sourceTree = "<group>"; };
 		BC70C2642625ACF70070AE5C /* Sequence+DomainMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+DomainMapping.swift"; sourceTree = "<group>"; };
 		BC70C2692625AD4F0070AE5C /* Single+DomainMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Single+DomainMapping.swift"; sourceTree = "<group>"; };
@@ -203,7 +204,6 @@
 		BCCC3CCE250B73070065D7DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCCDDCB726453E4B002EE41B /* MyNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigationView.swift; sourceTree = "<group>"; };
 		BCCDDCC426453E98002EE41B /* BaseCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCustomView.swift; sourceTree = "<group>"; };
-		BCE1E6F826404932008774FA /* ReactiveCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveCoordinator.swift; sourceTree = "<group>"; };
 		BCE1E6FE26404F76008774FA /* BlockUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockUseCase.swift; sourceTree = "<group>"; };
 		BCE1E7352640520D008774FA /* MovieUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieUseCase.swift; sourceTree = "<group>"; };
 		BCE1E73A2640530B008774FA /* StarWarUserCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarUserCase.swift; sourceTree = "<group>"; };
@@ -563,11 +563,11 @@
 		BCA1384F2624452B00801770 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				BCE1E6F826404932008774FA /* ReactiveCoordinator.swift */,
 				BCA13847262422FA00801770 /* BaseViewModel.swift */,
 				BCA138502624453700801770 /* BaseViewController.swift */,
 				BCFF2E8726317F0300BD58DD /* BaseCollectionViewCell.swift */,
 				BCCDDCC426453E98002EE41B /* BaseCustomView.swift */,
+				BC687DB5266D228100DCAE1C /* BaseCoordinator.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1115,7 +1115,6 @@
 				BCA138052622A10500801770 /* ServiceAssembly.swift in Sources */,
 				BCB31DF42620140B0087B5A5 /* DomainConvertible.swift in Sources */,
 				BCA137A5262200BD00801770 /* MovieService.swift in Sources */,
-				BCE1E6F926404932008774FA /* ReactiveCoordinator.swift in Sources */,
 				BCA138302624067500801770 /* AppCoordinator.swift in Sources */,
 				BC32CBDF26444BFB003851A8 /* MovieAttribute.swift in Sources */,
 				BCCC3CAB250B73060065D7DE /* AppDelegate.swift in Sources */,
@@ -1132,6 +1131,7 @@
 				BCA137902621FF9000801770 /* MovieAPIRouter.swift in Sources */,
 				BC32CBF9264454DB003851A8 /* MovieAttributeCell.swift in Sources */,
 				BCEA3A5E2644E97D0071842D /* OtherMovieSectionViewModel.swift in Sources */,
+				BC687DB6266D228200DCAE1C /* BaseCoordinator.swift in Sources */,
 				BC70C2742625B44E0070AE5C /* ErrorTracker.swift in Sources */,
 				BCE1E7362640520D008774FA /* MovieUseCase.swift in Sources */,
 				BC32CBE526444DF9003851A8 /* MovieDetailViewModel.swift in Sources */,

@@ -99,7 +99,7 @@ class HomeViewController: BaseViewController {
             case .movies(let cellViewModel):
                 let cell = cell as! MoviesSection
                 cell.bind(cellViewModel)
-                cellViewModel.inDidTapCell.bind(to: self.viewModel.outDidTapMovie).disposed(by: cell.disposeBag)
+                cellViewModel.inDidTapCell.debug().bind(to: self.viewModel.outDidTapMovie).disposed(by: cell.disposeBag)
             case .starships(let cellViewModel):
                 (cell as! StarShipSection).bind(cellViewModel)
             }

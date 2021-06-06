@@ -10,17 +10,20 @@ import UIKit
 import Swinject
 import RxSwift
 
-class AppCoordinator: ReactiveCoordinator<Void> {
+class AppCoordinator: BaseCoordinator {
     
-    let window: UIWindow?
+    var window: UIWindow?
     
     public init(window: UIWindow?) {
+        super.init(parent: nil)
         self.window = window
     }
     
-    override func start() -> Observable<Void> {
-        let tabBarCoordinator = TabBarCoordinator(window: window)
-        return coordinate(to: tabBarCoordinator)
+    override func start() {
+        let tabBarCoordinator = TabBarCoordinator(parent: self)
+        coordinate(with: tabBarCoordinator)
+        window?.rootViewController = tabBarCoordinator.tabBarVC
+        window?.makeKeyAndVisible()
     }
     
 }
