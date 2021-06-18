@@ -121,10 +121,7 @@ class TabBarItemView: UIView {
     
     private func addSubviews() {
         addSubview(contentView)
-        contentView.addSubview(defaultIconImageView)
-        contentView.addSubview(iconImageView)
-        contentView.addSubview(titleLabel)
-        contentView.addSubview(badgeView)
+        contentView.addSubviews(defaultIconImageView, iconImageView, titleLabel, badgeView)
         
         contentView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         contentView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
